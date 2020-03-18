@@ -11,8 +11,13 @@ class MainActivityTrain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_train)
-        var ddisease : List<Disease>? = listOf(Profile.Disease!!)
-
-        listVV.adapter = ArrayAdapter<Excercise>(this, simple_list_item_1, TrainProgramm.checkExercise(ddisease))
+        if (Profile.Disease != null) {
+            var ddisease: List<Disease>? = listOf(Profile.Disease!!)
+            listVV.adapter = ArrayAdapter<Excercise>(this, simple_list_item_1, TrainProgramm.checkExercise(ddisease))
+        }
+        else{
+            var ddisease: List<Disease>? = listOf()
+            listVV.adapter = ArrayAdapter<Excercise>(this, simple_list_item_1, TrainProgramm.checkExercise(ddisease))
+        }
     }
 }

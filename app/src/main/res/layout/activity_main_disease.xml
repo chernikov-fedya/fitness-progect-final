@@ -17,18 +17,24 @@
         android:layout_height="wrap_content">
         <RadioButton
             android:id="@+id/radioButton_hands"
-            android:layout_width="84dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="Нет рук"
             />
         <RadioButton
             android:id="@+id/radioButton_foots"
-            android:layout_width="84dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="Нет ног"
             />
+        <RadioButton
+            android:id="@+id/radioButton_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Здоров"
+            android:checked="false"/>
     </RadioGroup>
     <Button
         android:layout_width="wrap_content"

@@ -15,13 +15,16 @@ class MainActivityDisease : AppCompatActivity() {
         setContentView(R.layout.activity_main_disease)
     }
     fun disease(v : View){
-        if(radioButton_hands.isChecked == true){
-            Profile.Disease = TrainProgramm.listBroke[0]
+        if(radioButton_health.isChecked == true) {
+            Profile.Disease = null
         }
-        else{
-            Profile.Disease = TrainProgramm.listBroke[1]
+        else {
+            if (radioButton_hands.isChecked == true) {
+                Profile.Disease = TrainProgramm.listBroke[0]
+            } else {
+                Profile.Disease = TrainProgramm.listBroke[1]
+            }
         }
-
         var next = Intent(this@MainActivityDisease, MainActivityMenu::class.java)
         next.putExtra("Disease", 1)
         startActivity(next)

@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 object TrainProgramm {
+
     val listMuscle: Array<Muscle> = arrayOf(
         Muscle("Грудные мышцы"),
         Muscle("Трицепс"),
@@ -25,11 +26,7 @@ object TrainProgramm {
         listExcercise[1].diseases = arrayOf(listBroke[1])
         listExcercise[2].diseases = arrayOf(listBroke[0])
     }
-    //    fun checkAll(disease: List<Disease>? = null, ibm: Float):MutableList<Excercise>{
-//
-//        return checkExerciseIMB(checkExercise(disease),ibm)
-//
-//    }
+
     //Болезнь - опциональный параметр, она может не передаваться
     fun checkExercise(disease: List<Disease>? = null): MutableList<Excercise> {
         var actual = listExcercise.clone().toMutableList()
@@ -45,3 +42,10 @@ object TrainProgramm {
         return actual
     }
 }
+
+
+//    fun checkAll(disease: List<Disease>? = null, ibm: Float):MutableList<Excercise>{
+//
+//        return checkExerciseIMB(checkExercise(disease),ibm)
+//
+//    }
