@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityDisease"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите свою болезнь:" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radioButton_hands"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Нет рук"
+            />
+        <RadioButton
+            android:id="@+id/radioButton_foots"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Нет ног"
+            />
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Завершить регистрацию"
+        android:onClick="disease"/>
+</LinearLayout>

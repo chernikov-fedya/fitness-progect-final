@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#570000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="launcColor">#FF00FF</color>
+    <color name="backColor">#485661</color>
+    <color name="wColor">#FFFFFF</color>
+    <color name="TextBlackColor">#202C34</color>
+    <color name="TextWColor">#6C6C6C</color>
+    <color name="ButtonColor">#4489ff</color>
+    <color name="PhotoColor">#DCEFF3</color>
+    <color name="BackWColor">#BBD7ED</color>
+</resources>
