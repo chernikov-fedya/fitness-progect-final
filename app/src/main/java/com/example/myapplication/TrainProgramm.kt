@@ -21,6 +21,7 @@ object TrainProgramm {
         Excercise("Приседания", (arrayOf(listMuscle[4], listMuscle[5])))
     )
     init {
+        listExcercise[0].diseases = arrayOf(listBroke[1])
         listExcercise[1].diseases = arrayOf(listBroke[1])
         listExcercise[2].diseases = arrayOf(listBroke[0])
     }

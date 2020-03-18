@@ -21,4 +21,9 @@ class Excercise(val name: String?, var muscleGroup: Array<Muscle>,var imbDownLim
     var diseases: Array<Disease> = arrayOf()
 
     fun checkDiseases(disease: Disease) = diseases.find { it ==  disease } == null
+
+    override fun toString(): String {
+        return "$name"
+    }
+
 }

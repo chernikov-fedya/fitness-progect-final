@@ -16,10 +16,10 @@ class MainActivityDisease : AppCompatActivity() {
     }
     fun disease(v : View){
         if(radioButton_hands.isChecked == true){
-            Profile.Disease = Disease("Нет рук")
+            Profile.Disease = TrainProgramm.listBroke[0]
         }
         else{
-            Profile.Disease = Disease("Нет ног")
+            Profile.Disease = TrainProgramm.listBroke[1]
         }
 
         var next = Intent(this@MainActivityDisease, MainActivityMenu::class.java)

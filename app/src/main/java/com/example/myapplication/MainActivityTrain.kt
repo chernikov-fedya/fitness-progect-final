@@ -11,10 +11,8 @@ class MainActivityTrain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_train)
-        var trainArray : Array<String> = arrayOf()
-        for (i in 0..TrainProgramm.checkExercise().size - 1)
-            trainArray[i] = TrainProgramm.checkExercise()[i].name.toString()
+        var ddisease : List<Disease>? = listOf(Profile.Disease!!)
 
-        listVV.adapter = ArrayAdapter<Excercise>(this, simple_list_item_1, TrainProgramm.checkExercise())
+        listVV.adapter = ArrayAdapter<Excercise>(this, simple_list_item_1, TrainProgramm.checkExercise(ddisease))
     }
 }
