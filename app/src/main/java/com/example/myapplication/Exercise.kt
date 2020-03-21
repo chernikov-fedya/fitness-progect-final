@@ -1,5 +1,12 @@
 package com.example.myapplication
 
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+
 class Excercise(val name: String?, var muscleGroup: Array<Muscle>,var imbDownLimit: Float? = null , var imbLimit: Float? = null) {
     //var defaultRest: Double = 30.0
     //var podxod: Int? = null
@@ -26,4 +33,26 @@ class Excercise(val name: String?, var muscleGroup: Array<Muscle>,var imbDownLim
         return "$name"
     }
 
+}
+class ExerciseAdapter(): RecyclerView.Adapter<ExerciseAdapter.Companion.ExerciseHolder>(){
+    var excercises : MutableList<Excercise> = mutableListOf()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder {
+        var eee = LayoutInflater.from(parent.context).inflate(R.layout.exercise_view, parent,false )
+        return ExerciseHolder(eee)
+    }
+
+    override fun getItemCount(): Int = excercises.size
+
+    override fun onBindViewHolder(holder: ExerciseHolder, position: Int) {
+        holder.bind(excercises[position])
+    }
+    companion object{
+        class ExerciseHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+            var n : TextView = itemView.findViewById(R.id.name_ex)
+
+            fun bind(excercise: Excercise){
+                n.setText(excercise.name)
+            }
+        }
+    }
 }

@@ -111,23 +111,20 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="12dp"
-            android:gravity="center">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left">
-
+            android:gravity="center"
+            android:orientation="horizontal">
                 <RadioButton
                     android:id="@+id/radioButton_male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_gravity="center_vertical" />
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:background="@drawable/male"
-                        android:layout_marginEnd="20dp"></ImageView>
+                        android:layout_marginEnd="20dp">
+                    </ImageView>
 
                 <RadioButton
                     android:layout_gravity="center_vertical"
@@ -138,9 +135,8 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/female"></ImageView>
-
-            </LinearLayout>
+                    android:background="@drawable/female">
+                </ImageView>
         </RadioGroup>
         <Button
             android:id="@+id/logAc"

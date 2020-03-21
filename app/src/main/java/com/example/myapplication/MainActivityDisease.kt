@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_main_disease.*
-import kotlinx.android.synthetic.main.activity_main_registr.view.*
+
 
 class MainActivityDisease : AppCompatActivity() {
 
