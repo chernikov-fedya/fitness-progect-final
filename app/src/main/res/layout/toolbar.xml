@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ButtonColor"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Toolbar">
+
+    <ImageButton
+        android:id="@+id/back"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:clickable="true"
+        android:collapseIcon="@drawable/back"
+        android:contentDescription="TODO"
+        android:foreground="@drawable/back"
+        android:foregroundTint="#FFFFFF"
+        android:onClick="back">
+
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingStart="2dp"
+        android:text="СОЗДАНИЕ АККАУНТА"
+        android:textColor="@color/ICONS"
+        android:textSize="18sp" />
+
+    </android.widget.Toolbar>
+

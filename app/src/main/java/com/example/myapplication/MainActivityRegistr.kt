@@ -10,7 +10,7 @@ class MainActivityRegistr : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_registr)
+        setContentView(R.layout.activity_light_registr)
     }
     fun display(v : View) {
         Profile.Login = login.text.toString()
@@ -26,5 +26,10 @@ class MainActivityRegistr : AppCompatActivity() {
         var next: Intent = Intent(this@MainActivityRegistr, MainActivityDisease::class.java)
         next.putExtra("login",Profile.Login)
         startActivity(next)
+    }
+    fun back(v: View){
+        var back = Intent(this@MainActivityRegistr, MainActivity::class.java)
+        back.putExtra("back", 0)
+        startActivity(back)
     }
 }
