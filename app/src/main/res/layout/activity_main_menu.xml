@@ -1,23 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityMenu">
+    android:background="#F3FAFD"
+    android:layout_column="1"
+    android:layout_row="2"
+    android:orientation="horizontal"
+    tools:context=".MainActivityMenu"
+    android:id="@+id/linearLayout">
+
+    <android.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ButtonColor"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Toolbar">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:collapseIcon="@drawable/back"
+            android:foreground="@drawable/back"
+            android:foregroundTint="#FFFFFF"
+            android:onClick="back"
+            tools:ignore="OnClick">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:text="ГЛАВНАЯ"
+            android:textColor="@color/ICONS"
+            android:textSize="18sp" />
+
+    </android.widget.Toolbar>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/ButtonColor"
+        android:radius="10dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:elevation="6dp"
+        android:layout_gravity="center"
         android:text="Составить программу тренировок"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="151dp"
         android:onClick="make"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="profile"
-        android:text="Профиль" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="bottom"
+        android:background="@color/ICONS">
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/profile"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/ic_person_black_24dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Профиль"
+            app:srcCompat="@drawable/ic_person_black_24dp" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</GridLayout>
