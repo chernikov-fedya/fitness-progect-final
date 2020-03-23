@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivityDisease"></activity>
+        <activity android:name=".Desc"></activity>
+        <activity android:name=".MainActivityDisease" />
         <activity android:name=".MainActivityTrain" />
         <activity android:name=".MainActivityProfile" />
         <activity android:name=".MainActivityMain" />
