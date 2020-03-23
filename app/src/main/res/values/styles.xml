@@ -42,4 +42,7 @@
         <item name="contentPaddingRight">16dp</item>
         <item name="cardBackgroundColor">@color/indigo</item>
     </style>
+    <style name="MyRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="colorAccent">@color/ButtonColor</item>
+    </style>
 </resources>

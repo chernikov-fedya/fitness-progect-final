@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:textColor="#fff"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="24dp"
         android:background="@color/ButtonColor"
         android:radius="10dp"
@@ -80,6 +80,7 @@
             android:background="@drawable/ic_person_black_24dp"
             android:backgroundTint="#00FFFFFF"
             android:text="Профиль"
+
             android:onClick="profile"
             app:srcCompat="@drawable/ic_person_black_24dp" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
