@@ -19,19 +19,6 @@
         android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/Toolbar">
-        <ImageButton
-            android:id="@+id/back"
-            style="@android:style/Widget.Material.ImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00FFFFFF"
-            android:clickable="true"
-            android:collapseIcon="@drawable/back"
-            android:foreground="@drawable/back"
-            android:foregroundTint="#FFFFFF"
-            android:onClick="back"
-            tools:ignore="OnClick">
-        </ImageButton>
 
         <TextView
             android:id="@+id/toolbar_title"
