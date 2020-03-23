@@ -24,10 +24,11 @@ object TrainProgramm {
         Excercise("Отжимания", (arrayOf(listMuscle[0], listMuscle[1]))),
         Excercise("Подтягивания", (arrayOf(listMuscle[2], listMuscle[3]))),
         Excercise("Приседания", (arrayOf(listMuscle[4], listMuscle[5]))),
-        Excercise("Становая тяга",(arrayOf(listMuscle[2], listMuscle[4]))),
-        Excercise("Жим от груди",(arrayOf(listMuscle[0], listMuscle[1], listMuscle[7]))),
+        Excercise("Становая тяга", (arrayOf(listMuscle[2], listMuscle[4]))),
+        Excercise("Жим от груди", (arrayOf(listMuscle[0], listMuscle[1], listMuscle[7]))),
         Excercise("Бег", (arrayOf(listMuscle[5], listMuscle[9], listMuscle[8], listMuscle[4])))
     )
+
     init {
         listExcercise[0].diseases = arrayOf(listBroke[1])
         listExcercise[1].diseases = arrayOf(listBroke[1])
@@ -41,11 +42,9 @@ object TrainProgramm {
     fun checkExercise(disease: List<Disease>? = null): MutableList<Excercise> {
         var actual = listExcercise.clone().toMutableList()
         if (disease != null) {
-            for (i in 0..actual.size - 1) {
-                disease.forEach {
-                    actual.remove(
-                        actual.find { excercise: Excercise -> excercise.checkDiseases(it) }
-                    )
+            disease.forEach { tit ->
+                repeat(actual.size) {
+                    actual.removeAll { it.checkDiseases(tit) }
                 }
             }
         }

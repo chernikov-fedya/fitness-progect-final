@@ -22,7 +22,8 @@ class MainActivityDisease : AppCompatActivity() {
         else {
             if (radioButton_hands.isChecked == true) {
                 Profile.Disease = TrainProgramm.listBroke[0]
-            } else {
+            }
+            else {
                 Profile.Disease = TrainProgramm.listBroke[1]
             }
         }
