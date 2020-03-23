@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
 class Excercise(val name: String?, var muscleGroup: Array<Muscle>,var imbDownLimit: Float? = null , var imbLimit: Float? = null) {
@@ -29,7 +28,7 @@ class Excercise(val name: String?, var muscleGroup: Array<Muscle>,var imbDownLim
     }*/
     var diseases: Array<Disease> = arrayOf()
 
-    fun checkDiseases(disease: Disease) = diseases.find { it ==  disease } == null
+    fun checkDiseases(disease: Disease) = diseases.find { it !=  disease } != null
 
     override fun toString(): String {
         return "$name"
