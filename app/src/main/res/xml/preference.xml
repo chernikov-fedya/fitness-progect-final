@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<!--    <PreferenceCategory-->
+<!--        android:key="profile_category"-->
+<!--        android:title="Профиль"-->
+<!--        >-->
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="Ваше имя"-->
+<!--            android:dialogMessage="Ведите ваше полное имя"-->
+<!--            android:key="key_name"-->
+<!--            android:title="Имя"-->
+<!--            android:summary=""-->
+<!--            >-->
+<!--        </EditTextPreference>-->
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="Ваш вес"-->
+<!--            android:dialogMessage="Введите ваш вес"-->
+<!--            android:key="key_weight"-->
+<!--            android:title="Вес"-->
+<!--            android:summary=""-->
+<!--            >-->
+<!--        </EditTextPreference>-->
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="Ваш рост"-->
+<!--            android:dialogMessage="Введите ваш рост"-->
+<!--            android:key="key_height"-->
+<!--            android:title="Рост"-->
+<!--            android:summary=""-->
+<!--            ></EditTextPreference>-->
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="Ваш возраст"-->
+<!--            android:dialogMessage="Введите ваш возраст"-->
+<!--            android:key="key_age"-->
+<!--            android:title="Возраст"-->
+<!--            android:summary=""-->
+<!--            ></EditTextPreference>-->
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="Ваш пол"-->
+<!--            android:dialogMessage="Введите ваш пол"-->
+<!--            android:key="key_sex"-->
+<!--            android:title="Пол"-->
+<!--            android:summary=""-->
+<!--            >-->
+<!--        </EditTextPreference>-->
+<!--   </PreferenceCategory>-->
+</PreferenceScreen>

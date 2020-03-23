@@ -13,6 +13,7 @@ class MainActivityRegistr : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_light_registr)
     }
+
     fun display(v : View) {
         Profile.Login = login.text.toString()
         Profile.Password = password.text.toString()
