@@ -21,4 +21,9 @@ class MainActivityMenu : AppCompatActivity() {
         next1.putExtra("Train", 1)
         startActivity(next1)
     }
+    fun back(v: View){
+        var back = Intent(this@MainActivityMenu, MainActivityDisease::class.java)
+        back.putExtra("back", 0)
+        startActivity(back)
+    }
 }

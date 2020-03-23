@@ -80,6 +80,7 @@
             android:background="@drawable/ic_person_black_24dp"
             android:backgroundTint="#00FFFFFF"
             android:text="Профиль"
+            android:onClick="profile"
             app:srcCompat="@drawable/ic_person_black_24dp" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
