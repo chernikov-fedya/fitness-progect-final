@@ -10,7 +10,7 @@ class MainActivityMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
-    }
+    }   
     fun profile(v : View){
         var next:Intent = Intent(this@MainActivityMenu, MainActivityProfile::class.java )
         next.putExtra("Registr", 1)
