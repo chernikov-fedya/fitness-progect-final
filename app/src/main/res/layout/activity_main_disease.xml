@@ -1,44 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivityDisease"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:background="#F3FAFD"
+    android:layout_column="1"
+    android:layout_row="4"
     android:gravity="center_horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Выберите свою болезнь:" />
+        android:background="@color/ButtonColor"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Toolbar">
+        <ImageButton
+            android:id="@+id/back"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:collapseIcon="@drawable/back"
+            android:foreground="@drawable/back"
+            android:foregroundTint="#FFFFFF"
+            android:onClick="back"
+            tools:ignore="OnClick">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:text="ВЫБЕРИТЕ СВОЮ БОЛЕЗНЬ"
+            android:textColor="@color/ICONS"
+            android:textSize="18sp" />
+    </android.widget.Toolbar>
+
     <RadioGroup
         android:layout_width="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_marginTop="56dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="14dp"
+
         android:layout_height="wrap_content">
         <RadioButton
             android:id="@+id/radioButton_hands"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:checked="false"
+            android:paddingEnd="8dp"
             android:text="Нет рук"
-            />
+            android:theme="@style/MyRadioButton"
+            android:textColor="@color/TextBlackColor"
+            android:textSize="16sp"/>
         <RadioButton
             android:id="@+id/radioButton_foots"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:checked="false"
-            android:text="Нет ног"
-            />
+            android:theme="@style/MyRadioButton"
+            android:textColor="@color/TextBlackColor"
+            android:paddingEnd="8dp"
+            android:textSize="16sp"
+            android:text="Нет ног"/>
         <RadioButton
             android:id="@+id/radioButton_health"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="Здоров"
+            android:paddingEnd="8dp"
+            android:textSize="16sp"
+            android:theme="@style/MyRadioButton"
+            android:textColor="@color/TextBlackColor"
             android:checked="false"/>
     </RadioGroup>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Завершить регистрацию"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/ButtonColor"
+        android:radius="10dp"
+        android:layout_row="4"
+        android:layout_column="0"
         android:onClick="disease"/>
-</LinearLayout>
+</GridLayout>

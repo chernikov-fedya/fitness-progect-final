@@ -118,6 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
+                    android:theme="@style/MyRadioButton"
                     android:layout_gravity="center_vertical" />
                     <ImageView
                         android:layout_width="40dp"
@@ -129,6 +130,7 @@
                 <RadioButton
                     android:layout_gravity="center_vertical"
                     android:id="@+id/radioButton_female"
+                    android:theme="@style/MyRadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false" />
