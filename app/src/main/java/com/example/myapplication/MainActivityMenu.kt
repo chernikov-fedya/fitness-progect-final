@@ -12,7 +12,7 @@ class MainActivityMenu : AppCompatActivity() {
         setContentView(R.layout.activity_main_menu)
     }   
     fun profile(v : View){
-        var next:Intent = Intent(this@MainActivityMenu, MainActivityProfile::class.java )
+        var next:Intent = Intent(this@MainActivityMenu, ProfileActivity::class.java )
         next.putExtra("Registr", 1)
         startActivity(next)
     }

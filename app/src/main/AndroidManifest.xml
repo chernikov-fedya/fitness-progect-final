@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Desc"></activity>
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".MainActivityDisease" />
+        <activity android:name=".Desc" />
         <activity android:name=".MainActivityTrain" />
         <activity android:name=".MainActivityMenu" />
         <activity android:name=".MainActivityRegistr" />

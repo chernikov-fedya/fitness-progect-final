@@ -18,9 +18,9 @@ class MainActivityRegistr : AppCompatActivity() {
         Profile.login = login.text.toString()
         Profile.password = password.text.toString()
         Profile.name = name.text.toString()
-        Profile.height = height.text.toString().toDouble()
-        Profile.weight = weight.text.toString().toDouble()
-        Profile.age = age.text.toString().toInt()
+        Profile.height = height.text.toString()
+        Profile.weight = weight.text.toString()
+        Profile.age = age.text.toString()
         if (radioButton_male.isChecked == true)
             Profile.sex = "Мужчина"
         else
