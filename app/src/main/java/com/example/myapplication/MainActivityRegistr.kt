@@ -15,18 +15,18 @@ class MainActivityRegistr : AppCompatActivity() {
     }
 
     fun display(v : View) {
-        Profile.Login = login.text.toString()
-        Profile.Password = password.text.toString()
-        Profile.Name = name.text.toString()
-        Profile.Height = height.text.toString().toDouble()
-        Profile.Weight = weight.text.toString().toDouble()
-        Profile.Age = age.text.toString().toInt()
+        Profile.login = login.text.toString()
+        Profile.password = password.text.toString()
+        Profile.name = name.text.toString()
+        Profile.height = height.text.toString().toDouble()
+        Profile.weight = weight.text.toString().toDouble()
+        Profile.age = age.text.toString().toInt()
         if (radioButton_male.isChecked == true)
-            Profile.Sex = "Мужчина"
+            Profile.sex = "Мужчина"
         else
-            Profile.Sex = "Женщина"
+            Profile.sex = "Женщина"
         var next: Intent = Intent(this@MainActivityRegistr, MainActivityDisease::class.java)
-        next.putExtra("login",Profile.Login)
+        next.putExtra("login",Profile.login)
         startActivity(next)
     }
     fun back(v: View){

@@ -1,21 +1,26 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.preference.PreferenceActivity
-import android.preference.PreferenceScreen
-import android.widget.ArrayAdapter
-import kotlinx.android.synthetic.main.activity_main_profile.*
+
+import android.preference.*
+
 
 //class MainActivityProfile : PreferenceFragmentCompat() {
-//    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-//        setPreferencesFromResource(R.xml.preference, rootKey)
-//        setPreferenceListener(findPreference<EditTextPreference>(key_name)!!)
-//        setPreferenceListener(findPreference<EditTextPreference>(key_weight)!!)
-//        setPreferenceListener(findPreference<EditTextPreference>(key_height)!!)
-//        setPreferenceListener(findPreference<SwitchPreferenceCompat>(key_age)!!)
-//        setPreferenceListener(findPreference<SwitchPreferenceCompat>(key_sex)!!)
+//
+//
+//
+//      override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+//       setPreferencesFromResource(R., rootKey)
+//       setPreferenceListener(findPreference<EditTextPreference>(key_name)!!)
+//       setPreferenceListener(findPreference<EditTextPreference>(key_weight)!!)
+//       setPreferenceListener(findPreference<EditTextPreference>(key_height)!!)
+//        setPreferenceListener(findPreference<EditTextPreference>(key_age)!!)
+//        setPreferenceListener(findPreference<EditTextPreference>(key_sex)!!)
 //    }
+//
+//    private fun setPreferencesFromResource(preference: Any, rootKey: String?) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//    }
+//
 //    companion object{
 //        val key_name = "key_name"
 //        val key_weight = "key_weight"
@@ -39,9 +44,9 @@ import kotlinx.android.synthetic.main.activity_main_profile.*
 //                preference.setSummary(value)
 //                when (preference.key){
 //                    key_name -> Profile.name = preference.summary.toString()
-//                    key_weight -> Profile.weight = preference.summary.toString()
-//                    key_height -> Profile.height = preference.summary.toString()
-//                    key_age -> Profile.age = preference.summary.toString()
+//                    key_weight -> Profile.weight = preference.summary.toString().toDouble()
+//                    key_height -> Profile.height = preference.summary.toString().toDouble()
+//                    key_age -> Profile.age = preference.summary.toString().toInt()
 //                    key_sex -> Profile.sex = preference.summary.toString()
 //                }
 //            }

@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_black_login)
     }
     fun insert(v : View){
-        if (Profile.Login == log.text.toString() && Profile.Password == pas.text.toString()){
+        if (Profile.login == log.text.toString() && Profile.password == pas.text.toString()){
             var next:Intent = Intent(this@MainActivity, MainActivityMenu::class.java)
-            next.putExtra("HaveLog", Profile.Login)
+            next.putExtra("HaveLog", Profile.login)
             startActivity(next)
             }
     }

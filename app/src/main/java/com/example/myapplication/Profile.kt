@@ -1,12 +1,12 @@
 package com.example.myapplication
 
 object Profile {
-    var Password: String? = null
-    var Login: String? = null
-    var Name: String? = null
-    var Height: Double? = null
-    var Weight: Double? = null
-    var Age: Int? = null
-    var Sex: String? = null
-    var Disease: Disease? = null
+    var password: String? = null
+    var login: String? = null
+    var name: String? = null
+    var height: Double? = null
+    var weight: Double? = null
+    var age: Int? = null
+    var sex: String? = null
+    var disease: Disease? = null
 }
