@@ -24,5 +24,6 @@ class MainActivity : AppCompatActivity() {
         next.putExtra("Registr", 1)
         startActivity(next)
     }
+    //d
 
 }
