@@ -35,15 +35,19 @@ class ProfileActivity : AppCompatActivity(){
 class PreferenceProfileFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-       setPreferencesFromResource(R.xml.preference, rootKey)
-       setPreferenceListener(findPreference<EditTextPreference>(key_name)!!)
-       setPreferenceListener(findPreference<EditTextPreference>(key_weight)!!)
-       setPreferenceListener(findPreference<EditTextPreference>(key_height)!!)
+        setPreferencesFromResource(R.xml.preference, rootKey)
+        setPreferenceListener(findPreference<EditTextPreference>(key_log)!!)
+        setPreferenceListener(findPreference<EditTextPreference>(key_pass)!!)
+        setPreferenceListener(findPreference<EditTextPreference>(key_name)!!)
+        setPreferenceListener(findPreference<EditTextPreference>(key_weight)!!)
+        setPreferenceListener(findPreference<EditTextPreference>(key_height)!!)
         setPreferenceListener(findPreference<EditTextPreference>(key_age)!!)
         setPreferenceListener(findPreference<EditTextPreference>(key_sex)!!)
     }
 
     companion object{
+        val key_log = "key_log"
+        val key_pass = "key_pass"
         val key_name = "key_name"
         val key_weight = "key_weight"
         val key_height = "key_height"
@@ -65,11 +69,13 @@ class PreferenceProfileFragment : PreferenceFragmentCompat() {
             if (preference is EditTextPreference) {
                 preference.setSummary(value)
                 when (preference.key){
-                    key_name -> Profile.name = preference.summary.toString()
-                    key_weight -> Profile.weight = preference.summary.toString()
-                    key_height -> Profile.height = preference.summary.toString()
-                    key_age -> Profile.age = preference.summary.toString()
-                    key_sex -> Profile.sex = preference.summary.toString()
+                    key_log -> preference.summary = Profile.login
+                    key_pass -> preference.summary = Profile.password
+                    key_name -> preference.summary = Profile.name
+                    key_weight -> preference.summary = Profile.weight
+                    key_height ->  preference.summary = Profile.height
+                    key_age ->  preference.summary = Profile.age
+                    key_sex -> preference.summary = Profile.sex
                 }
             }
             return@OnPreferenceChangeListener true

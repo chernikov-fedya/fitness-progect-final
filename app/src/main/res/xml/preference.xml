@@ -47,5 +47,11 @@
             android:summary="wef"
             >
         </EditTextPreference>
+        <EditTextPreference
+            android:key="key_log"
+            android:summary=" "/>
+        <EditTextPreference
+            android:key="key_pass"
+            android:summary=" "/>
    </PreferenceCategory>
 </PreferenceScreen>

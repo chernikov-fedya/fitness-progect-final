@@ -37,7 +37,6 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:text="ytgvfy"
                 android:id="@+id/login"
                 android:layout_gravity="fill"
                 android:layout_width="174dp"
@@ -49,7 +48,6 @@
                 android:textColor="#6C6C6C" />
 
             <EditText
-                android:text="adfadfsdf"
                 android:id="@+id/password"
                 android:layout_gravity="fill"
                 android:layout_width="174dp"
@@ -63,7 +61,6 @@
                 android:inputType="textPassword"/>
 
             <EditText
-                android:text="afasdf"
                 android:id="@+id/name"
                 android:layout_gravity="fill"
                 android:layout_width="174dp"
@@ -74,7 +71,6 @@
                 android:textColor="#6C6C6C" />
 
             <EditText
-                android:text="21312123"
                 android:id="@+id/height"
                 android:layout_gravity="fill"
                 android:layout_marginStart="14dp"
@@ -85,7 +81,6 @@
                 android:inputType="number"/>
 
             <EditText
-                android:text="123123"
                 android:layout_gravity="fill"
                 android:id="@+id/weight"
                 android:layout_marginStart="14dp"
@@ -95,7 +90,6 @@
                 android:inputType="number"/>
 
             <EditText
-                android:text="123123321"
                 android:layout_gravity="fill"
                 android:id="@+id/age"
                 android:layout_width="wrap_content"
