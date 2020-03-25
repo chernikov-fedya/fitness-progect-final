@@ -33,18 +33,6 @@ object TrainProgramm {
         Muscle("Абдоминальные мышцы")//19
     )
 
-    val listBroke: Array<Disease> = arrayOf(
-        Disease("Перелом руки"),
-        Disease("Перелом ноги"),
-        Disease("Перелом ключицы"),
-        Disease("Перелом позвоночника"),
-        Disease("Компрессионный перелом позвоночника"),
-        Disease("Сколиоз 1-2 степени"),
-        Disease("Вегетососудистая дистония"),
-        Disease("Сахарный диабет 1 типа"), // без ограничений по упражнениям
-        Disease("Сахарный диабет 1 типа") // рекомендуется избегать упражнений,
-        // при выполнении которых происходит резкая смена положения тела (гиперэкстензия, некоторые виды упражнений на пресс)
-    )
 
     val listExcercise: Array<Excercise> = arrayOf(
         Excercise("Отжимания", (arrayOf(listMuscle[0], listMuscle[1]))), // 0
@@ -67,14 +55,40 @@ object TrainProgramm {
         Excercise("Подъёмы таза со штангой", arrayOf(listMuscle[4], listMuscle[19])), //17
         Excercise("Подъем ног на скамье", arrayOf(listMuscle[15], listMuscle[5])) //18
     )
+    val listBroke: Array<Disease> = arrayOf(
+        Disease("Перелом руки"), //0
+        Disease("Перелом ноги"), //1
+        Disease("Перелом ключицы"), //2
+        Disease("Перелом позвоночника"), //3
+        Disease("Компрессионный перелом позвоночника"), //4
+        Disease("Сколиоз 1-2 степени"), //5
+        Disease("Вегетососудистая дистония"), //6
+        Disease("Сахарный диабет 1 типа"), // без ограничений по упражнениям 7
+        Disease("Сахарный диабет 2 типа") // рекомендуется избегать упражнений, 8
+        // при выполнении которых происходит резкая смена положения тела (гиперэкстензия, некоторые виды упражнений на пресс)
+    )
+
 
     init {
-        listExcercise[0].diseases = arrayOf(listBroke[1])
-        listExcercise[1].diseases = arrayOf(listBroke[1])
-        listExcercise[2].diseases = arrayOf(listBroke[0])
-        listExcercise[3].diseases = arrayOf(listBroke[0], listBroke[1])
-        listExcercise[4].diseases = arrayOf(listBroke[1])
-        listExcercise[5].diseases = arrayOf(listBroke[0])
+        listExcercise[0].diseases = arrayOf(listBroke[0], listBroke[4], listBroke[2]))
+        listExcercise[1].diseases = arrayOf(listBroke[2])
+        listExcercise[2].diseases = arrayOf(listBroke[1], listBroke[4], listBroke[6])
+        listExcercise[3].diseases = arrayOf(listBroke[0], listBroke[1], listBroke[4], listBroke[3], listBroke[6], listBroke[7], listBroke[8])
+        listExcercise[4].diseases = arrayOf(listBroke[0], listBroke[2], listBroke[6])
+        listExcercise[5].diseases = arrayOf()
+        listExcercise[6].diseases = arrayOf(listBroke[0])
+        listExcercise[7].diseases = arrayOf(listBroke[0])
+        listExcercise[8].diseases = arrayOf(listBroke[0])
+        listExcercise[9].diseases = arrayOf(listBroke[0])
+        listExcercise[10].diseases = arrayOf(listBroke[0])
+        listExcercise[11].diseases = arrayOf(listBroke[0])
+        listExcercise[12].diseases = arrayOf(listBroke[0])
+        listExcercise[13].diseases = arrayOf(listBroke[0])
+        listExcercise[14].diseases = arrayOf(listBroke[0])
+        listExcercise[15].diseases = arrayOf(listBroke[0])
+        listExcercise[16].diseases = arrayOf(listBroke[0])
+        listExcercise[17].diseases = arrayOf(listBroke[0])
+        listExcercise[18].diseases = arrayOf(listBroke[0])
     }
 
     //Болезнь - опциональный параметр, она может не передаваться
