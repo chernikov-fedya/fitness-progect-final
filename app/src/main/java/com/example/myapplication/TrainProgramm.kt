@@ -20,7 +20,17 @@ object TrainProgramm {
         Muscle("Трапециевидные мышцы"),//6
         Muscle("Дельтовидные мышцы"),//7
         Muscle("Квадрицепсы"),//8
-        Muscle("Икры")//9
+        Muscle("Икры"), //9
+        Muscle("Двуглавая мышца плеча"),//10
+        Muscle("Внутреняя поверхность бедра"),//11
+        Muscle("Внешняя поверхность бедра"),//12
+        Muscle("Передняя зубчатая мыщца"),//13
+        Muscle("Наружная косая мыщца"),//14
+        Muscle("Прямая мышца живота"),//15
+        Muscle("Мыщцы голени"),//16
+        Muscle("Разгибатели спины"),//17
+        Muscle("Передняя большеберцовая мышца"),//18
+        Muscle("Абдоминальные мышцы")//19
     )
 
     val listBroke: Array<Disease> = arrayOf(
@@ -30,12 +40,25 @@ object TrainProgramm {
     )
 
     val listExcercise: Array<Excercise> = arrayOf(
-        Excercise("Отжимания", (arrayOf(listMuscle[0], listMuscle[1]))),
-        Excercise("Подтягивания", (arrayOf(listMuscle[2], listMuscle[3]))),
-        Excercise("Приседания", (arrayOf(listMuscle[4], listMuscle[5]))),
-        Excercise("Становая тяга", (arrayOf(listMuscle[2], listMuscle[4]))),
-        Excercise("Жим от груди", (arrayOf(listMuscle[0], listMuscle[1], listMuscle[7]))),
-        Excercise("Бег", (arrayOf(listMuscle[5], listMuscle[9], listMuscle[8], listMuscle[4])))
+        Excercise("Отжимания", (arrayOf(listMuscle[0], listMuscle[1]))), // 0
+        Excercise("Подтягивания", (arrayOf(listMuscle[2], listMuscle[3]))), //1
+        Excercise("Приседания", (arrayOf(listMuscle[4], listMuscle[5]))), //2
+        Excercise("Становая тяга", (arrayOf(listMuscle[2], listMuscle[4]))), //3
+        Excercise("Жим от груди (лёжа)", (arrayOf(listMuscle[0], listMuscle[2], listMuscle[10]))), //4
+        Excercise("Бег", (arrayOf(listMuscle[5], listMuscle[9], listMuscle[8], listMuscle[4]))), //5
+        Excercise("Жим от груди (сидя)", arrayOf(listMuscle[0], listMuscle[1], listMuscle[7])), //6
+        Excercise("Приседания с гирей", arrayOf(listMuscle[8], listMuscle[4], listMuscle[5])), //7
+        Excercise("Жим двумя ногами", arrayOf(listMuscle[8], listMuscle[4], listMuscle[11], listMuscle[12], listMuscle[4])), //8
+        Excercise("Сгибание рук на бицепс-машине", arrayOf(listMuscle[3])), //9
+        Excercise("Сгибания в пресс-машине", arrayOf(listMuscle[15], listMuscle[14], listMuscle[13])), //10
+        Excercise("Выпады", arrayOf(listMuscle[8], listMuscle[4], listMuscle[16] )), //11
+        Excercise("Румынская тяга", arrayOf(listMuscle[8], listMuscle[4], listMuscle[6])), //12
+        Excercise("Гиперэкстензия", arrayOf(listMuscle[4], listMuscle[5])), //13
+        Excercise("Обратная гиперэкстензия", arrayOf(listMuscle[4], listMuscle[5], listMuscle[17])), //14
+        Excercise("Тяга в наклоне", arrayOf(listMuscle[2], listMuscle[6], listMuscle[17])), //15
+        Excercise("Скручивания на римском стуле", arrayOf(listMuscle[15], listMuscle[14], listMuscle[18])), //16
+        Excercise("Подъёмы таза со штангой", arrayOf(listMuscle[4], listMuscle[19])), //17
+        Excercise("Подъем ног на скамье", arrayOf(listMuscle[15], listMuscle[5])) //18
     )
 
     init {
