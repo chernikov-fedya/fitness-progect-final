@@ -16,7 +16,7 @@ class MainActivityTrain : AppCompatActivity() {
         var ka = ExerciseAdapter()
         ka.c = this
         if (Profile.disease != null) {
-            var ddisease: List<Disease>? = listOf(Profile.disease!!)
+            var ddisease: List<Disease>? = Profile.disease!!
             ka.excercises = TrainProgramm.checkExercise(ddisease)
         }
         else{

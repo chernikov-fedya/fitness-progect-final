@@ -13,4 +13,5 @@
     <color name="BackWColor">#BBD7ED</color>
     <color name="ICONS">#FFFFFF</color>
     <color name="indigo">#4b0082</color>
+    <color name="black">#000000</color>
 </resources>

@@ -1,6 +1,14 @@
 package com.example.myapplication
 
+import com.example.myapplication.Profile.disease
+
 object TrainProgramm {
+    val listchoose: Array<Muscle> = arrayOf(
+        Muscle("Ноги"),
+        Muscle("Руки"),
+        Muscle("Спина"),
+        Muscle("Грудь")
+    )
 
     val listMuscle: Array<Muscle> = arrayOf(
         Muscle("Грудные мышцы"),//0
@@ -45,6 +53,17 @@ object TrainProgramm {
             disease.forEach { tit ->
                 repeat(actual.size) {
                     actual.removeAll { it.checkDiseases(tit) }
+                }
+            }
+        }
+        return actual
+    }
+    fun checkExerciseChoose(muscle: List<Muscle>? = null): MutableList<Excercise>{
+        var actual = checkExercise(disease!!)
+        if (muscle != null){
+            muscle.forEach { ti ->
+                repeat(actual.size){
+                    actual.removeAll { it.checkChoose(ti) }
                 }
             }
         }

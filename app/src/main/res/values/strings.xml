@@ -18,5 +18,7 @@
     <string-array name="diseaselist">
         <item>Нет рук</item>
         <item>Нет ног</item>
+        <item>Здоров</item>
     </string-array>
+
 </resources>

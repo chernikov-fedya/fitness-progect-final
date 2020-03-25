@@ -8,5 +8,6 @@ object Profile {
     var weight: String? = null
     var age: String? = null
     var sex: String? = null
-    var disease: Disease? = null
+    var disease: MutableList<Disease> = mutableListOf()
+    var choose: MutableList<Muscle> = mutableListOf()
 }

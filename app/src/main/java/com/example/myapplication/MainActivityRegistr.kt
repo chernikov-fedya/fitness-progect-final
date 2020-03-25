@@ -23,7 +23,7 @@ class MainActivityRegistr : AppCompatActivity() {
         Profile.age = age.text.toString()
         if (radioButton_male.isChecked == true)
             Profile.sex = "Мужчина"
-        else
+        if (radioButton_female.isChecked == true)
             Profile.sex = "Женщина"
         var next: Intent = Intent(this@MainActivityRegistr, MainActivityDisease::class.java)
         next.putExtra("login",Profile.login)

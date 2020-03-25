@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivityDisease"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:background="#F3FAFD"
-    android:layout_column="1"
-    android:layout_row="4"
     android:gravity="center_horizontal">
 
     <android.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,59 +30,33 @@
             android:textColor="@color/ICONS"
             android:textSize="18sp" />
     </android.widget.Toolbar>
+<androidx.recyclerview.widget.RecyclerView
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_row="2"
-        android:layout_column="0"
-        android:layout_marginTop="56dp"
-        android:layout_gravity="left"
-        android:layout_marginStart="14dp"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    app:layout_constraintBottom_toTopOf="@+id/butt"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:id="@+id/recyclerdis"
+    tools:ignore="MissingConstraints" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/vp2"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/butt"/>
 
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:id="@+id/radioButton_hands"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:checked="false"
-            android:paddingEnd="8dp"
-            android:text="Нет рук"
-            android:theme="@style/MyRadioButton"
-            android:textColor="@color/TextBlackColor"
-            android:textSize="16sp"/>
-        <RadioButton
-            android:id="@+id/radioButton_foots"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:checked="false"
-            android:theme="@style/MyRadioButton"
-            android:textColor="@color/TextBlackColor"
-            android:paddingEnd="8dp"
-            android:textSize="16sp"
-            android:text="Нет ног"/>
-        <RadioButton
-            android:id="@+id/radioButton_health"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Здоров"
-            android:paddingEnd="8dp"
-            android:textSize="16sp"
-            android:theme="@style/MyRadioButton"
-            android:textColor="@color/TextBlackColor"
-            android:checked="false"/>
-    </RadioGroup>
     <Button
+        android:id="@+id/butt"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:text="Завершить регистрацию"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#fff"
         android:layout_gravity="center"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="320dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="100dp"
         android:background="@color/ButtonColor"
         android:radius="10dp"
-        android:layout_row="4"
-        android:layout_column="0"
-        android:onClick="disease"/>
-</GridLayout>
+        android:onClick="disease" />
+</androidx.constraintlayout.widget.ConstraintLayout>

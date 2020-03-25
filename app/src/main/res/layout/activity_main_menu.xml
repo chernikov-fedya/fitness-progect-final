@@ -30,8 +30,7 @@
             android:collapseIcon="@drawable/back"
             android:foreground="@drawable/back"
             android:foregroundTint="#FFFFFF"
-            android:onClick="back"
-            tools:ignore="OnClick">
+            android:onClick="back">
 
         </ImageButton>
 
