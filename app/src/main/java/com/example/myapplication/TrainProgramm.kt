@@ -3,12 +3,6 @@ package com.example.myapplication
 import com.example.myapplication.Profile.disease
 
 object TrainProgramm {
-    val listchoose: Array<Muscle> = arrayOf(
-        Muscle("Ноги"),
-        Muscle("Руки"),
-        Muscle("Спина"),
-        Muscle("Грудь")
-    )
 
     val listMuscle: Array<Muscle> = arrayOf(
         Muscle("Грудные мышцы"),//0
@@ -31,6 +25,13 @@ object TrainProgramm {
         Muscle("Разгибатели спины"),//17
         Muscle("Передняя большеберцовая мышца"),//18
         Muscle("Абдоминальные мышцы")//19
+    )
+    val listchoose: List<MuscleGroup> = listOf(
+        MuscleGroup("Ноги",  arrayOf(listMuscle[4], listMuscle[5], listMuscle[8], listMuscle[9], listMuscle[10], listMuscle[11],listMuscle[12], listMuscle[16], listMuscle[18])),
+        MuscleGroup("Руки",  arrayOf(listMuscle[1], listMuscle[3], listMuscle[10])),
+        MuscleGroup("Спина", arrayOf(listMuscle[2], listMuscle[6], listMuscle[7], listMuscle[17])),
+        MuscleGroup("Грудь", arrayOf(listMuscle[0])),
+        MuscleGroup("Пресс", arrayOf(listMuscle[14],listMuscle[15], listMuscle[19]))
     )
 
 
@@ -84,11 +85,11 @@ object TrainProgramm {
         listExcercise[11].diseases = arrayOf(listBroke[1], listBroke[8])
         listExcercise[12].diseases = arrayOf(listBroke[3], listBroke[4], listBroke[6])
         listExcercise[13].diseases = arrayOf(listBroke[8])
-        listExcercise[14].diseases = arrayOf(listBroke[0])
-        listExcercise[15].diseases = arrayOf(listBroke[0])
-        listExcercise[16].diseases = arrayOf(listBroke[0])
-        listExcercise[17].diseases = arrayOf(listBroke[0])
-        listExcercise[18].diseases = arrayOf(listBroke[0])
+        listExcercise[14].diseases = arrayOf(listBroke[8])
+        listExcercise[15].diseases = arrayOf(listBroke[3], listBroke[4])
+        listExcercise[16].diseases = arrayOf(listBroke[3], listBroke[4])
+        listExcercise[17].diseases = arrayOf()
+        listExcercise[18].diseases = arrayOf(listBroke[1])
     }
 
     //Болезнь - опциональный параметр, она может не передаваться
@@ -97,7 +98,7 @@ object TrainProgramm {
         if (disease != null) {
             disease.forEach { tit ->
                 repeat(actual.size) {
-                    actual.removeAll { it.checkDiseases(tit) }
+                    actual.removeAll { !(it.checkDiseases(tit)) }
                 }
             }
         }

@@ -41,7 +41,7 @@ class Excercise(
     }*/
     var diseases: Array<Disease> = arrayOf()
 
-    fun checkDiseases(disease: Disease) = diseases.find { it !=  disease } != null
+    fun checkDiseases(disease: Disease) = diseases.find { it ==  disease } == null
 
     fun checkChoose(muscle: Muscle) = muscleGroup.find { it != muscle } != null
 
