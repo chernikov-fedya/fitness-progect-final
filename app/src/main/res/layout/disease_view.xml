@@ -8,13 +8,13 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ccheck"
+        android:id="@+id/ccheckk"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/text"
-        android:layout_toRightOf = "@id/ccheck"
+        android:layout_toRightOf = "@id/ccheckk"
         tools:text = "ывлпывпдывр"
         />
 </RelativeLayout>

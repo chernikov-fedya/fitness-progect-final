@@ -25,13 +25,14 @@ class DiseaseAdapter() : RecyclerView.Adapter<DiseaseAdapter.Companion.DiseaseHo
     companion object{
         class DiseaseHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
             var n : TextView = itemView.findViewById(R.id.text)
-            var b : CheckBox = itemView.findViewById(R.id.ccheck)
+            var b : CheckBox = itemView.findViewById(R.id.ccheckk)
             fun bind(disease: Disease){
                 b.setOnCheckedChangeListener { buttonView, isChecked ->
-                    if (isChecked == true)
+                    if (isChecked)
                     Profile.disease?.add(disease)
-                    if (isChecked == false)
+                    else
                     Profile.disease?.remove(disease)
+
                 }
                 n.setText(disease.name)
             }

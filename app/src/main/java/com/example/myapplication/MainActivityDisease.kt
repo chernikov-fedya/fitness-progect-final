@@ -23,7 +23,6 @@ class MainActivityDisease : AppCompatActivity() {
 
         var pip = LinearLayoutManager(this)
         recyclerdis.layoutManager = pip
-
         var kak = DiseaseAdapter()
 
         recyclerdis.adapter = kak

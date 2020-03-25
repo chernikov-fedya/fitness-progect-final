@@ -24,8 +24,9 @@ object TrainProgramm {
     )
 
     val listBroke: Array<Disease> = arrayOf(
-        Disease("Нет ног"),
-        Disease("Нет рук")
+        Disease("Нет рук"),
+        Disease("Нет ног")
+
     )
 
     val listExcercise: Array<Excercise> = arrayOf(
