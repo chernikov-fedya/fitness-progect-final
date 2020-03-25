@@ -7,14 +7,13 @@ import android.os.Parcelable
 import kotlin.properties.Delegates
 
 class Desc : AppCompatActivity() {
-    var n: Int = 0
+    lateinit var n: Excercise
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_desc)
-        if (intent.extras?.get("a") != null)
-            n = intent.extras?.get("a").toString().toInt()
 
-        n = intent.extras?.get("a").toString().toInt()
+
+        n = intent.extras?.get("a") as Excercise
         //var s:Int = intent.getIntExtra("a", 0)
     }
 
