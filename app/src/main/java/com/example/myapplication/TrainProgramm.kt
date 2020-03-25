@@ -70,16 +70,16 @@ object TrainProgramm {
 
 
     init {
-        listExcercise[0].diseases = arrayOf(listBroke[0], listBroke[4], listBroke[2]))
+        listExcercise[0].diseases = arrayOf(listBroke[0], listBroke[4], listBroke[2])
         listExcercise[1].diseases = arrayOf(listBroke[2])
-        listExcercise[2].diseases = arrayOf(listBroke[1], listBroke[4], listBroke[6])
-        listExcercise[3].diseases = arrayOf(listBroke[0], listBroke[1], listBroke[4], listBroke[3], listBroke[6], listBroke[7], listBroke[8])
+        listExcercise[2].diseases = arrayOf(listBroke[1], listBroke[4], listBroke[6], listBroke[8])
+        listExcercise[3].diseases = listBroke
         listExcercise[4].diseases = arrayOf(listBroke[0], listBroke[2], listBroke[6])
         listExcercise[5].diseases = arrayOf()
-        listExcercise[6].diseases = arrayOf(listBroke[0])
-        listExcercise[7].diseases = arrayOf(listBroke[0])
-        listExcercise[8].diseases = arrayOf(listBroke[0])
-        listExcercise[9].diseases = arrayOf(listBroke[0])
+        listExcercise[6].diseases = arrayOf(listBroke[2], listBroke[6], listBroke[4])
+        listExcercise[7].diseases = arrayOf(listBroke[3], listBroke[4], listBroke[8])
+        listExcercise[8].diseases = arrayOf(listBroke[1], listBroke[3], listBroke[4], listBroke[5])
+        listExcercise[9].diseases = arrayOf(listBroke[])
         listExcercise[10].diseases = arrayOf(listBroke[0])
         listExcercise[11].diseases = arrayOf(listBroke[0])
         listExcercise[12].diseases = arrayOf(listBroke[0])
