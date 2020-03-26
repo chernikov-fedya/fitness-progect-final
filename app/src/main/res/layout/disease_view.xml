@@ -4,17 +4,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/ccheckk"
-        android:layout_alignParentRight="true"
-        tools:ignore="UnknownId" />
-    <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColorLink="@color/ButtonColor"
+        android:theme="@style/CheckBox"
+        tools:ignore="UnknownId" />
+
+    <TextView
         android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        tools:text = "ывлпывпдывр"
-        />
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHighlight="@color/ButtonColor"
+        android:textColorLink="@color/ButtonColor"
+        tools:text="ывлпывпдывр" />
 </RelativeLayout>
