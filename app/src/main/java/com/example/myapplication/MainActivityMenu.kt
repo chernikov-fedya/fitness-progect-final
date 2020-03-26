@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainActivityMenu : AppCompatActivity() {
 
@@ -22,8 +23,6 @@ class MainActivityMenu : AppCompatActivity() {
         startActivity(next1)
     }
     fun back(v: View){
-        var back = Intent(this@MainActivityMenu, MainActivityDisease::class.java)
-        back.putExtra("back", 0)
-        startActivity(back)
+        onBackPressed()
     }
 }

@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.example.myapplication.Profile.disease
 
 object TrainProgramm {
@@ -27,39 +29,107 @@ object TrainProgramm {
         Muscle("Абдоминальные мышцы")//19
     )
     val listchoose: List<MuscleGroup> = listOf(
-        MuscleGroup("Ноги",  arrayOf(listMuscle[4], listMuscle[5], listMuscle[8], listMuscle[9], listMuscle[10], listMuscle[11],listMuscle[12], listMuscle[16], listMuscle[18])),
-        MuscleGroup("Руки",  arrayOf(listMuscle[1], listMuscle[3], listMuscle[10])),
+        MuscleGroup(
+            "Ноги",
+            arrayOf(
+                listMuscle[4],
+                listMuscle[8],
+                listMuscle[9],
+                listMuscle[10],
+                listMuscle[11],
+                listMuscle[12],
+                listMuscle[16],
+                listMuscle[18]
+            )
+        ),
+        MuscleGroup("Руки", arrayOf(listMuscle[1], listMuscle[3], listMuscle[10])),
         MuscleGroup("Спина", arrayOf(listMuscle[2], listMuscle[6], listMuscle[7], listMuscle[17])),
         MuscleGroup("Грудь", arrayOf(listMuscle[0])),
-        MuscleGroup("Пресс", arrayOf(listMuscle[14],listMuscle[15], listMuscle[19]))
+        MuscleGroup("Пресс", arrayOf(listMuscle[14], listMuscle[15], listMuscle[19])),
+        MuscleGroup("Ягодицы", arrayOf(listMuscle[5]))
     )
 
 
     val listExcercise: Array<Excercise> = arrayOf(
-        Excercise("Отжимания", "Займите позицию: Лягте на пол лицом вниз. Ноги вместе. Вес должен быть перенесен на грудь." + "\n" +
-                "Приподнимите себя с помощью рук." + "\n" + "Опустите тело до уровня, когда руки будут согнуты в локтях на 90 градусов. Локти держите близко к телу для большей нагрузки." +
-                "Лицо должно смотреть вниз. Поддерживайте тело в позиции доска, не ломайте прямую линию. Делайте вдох при опускании тела." +"\n" +
-                "Поднимите себя, оттолкнувшись от земли. В это время делается выдох." +
-                "Необходимое для подьема усилие делается при помощи рук и груди",
-            (arrayOf(listMuscle[0], listMuscle[1]))), // 0
+        Excercise(
+            "Отжимания",
+            "Займите позицию: Лягте на пол лицом вниз. Ноги вместе. Вес должен быть перенесен на грудь." + "\n" +
+                    "Приподнимите себя с помощью рук." + "\n" + "Опустите тело до уровня, когда руки будут согнуты в локтях на 90 градусов. Локти держите близко к телу для большей нагрузки." +
+                    "Лицо должно смотреть вниз. Поддерживайте тело в позиции доска, не ломайте прямую линию. Делайте вдох при опускании тела." + "\n" +
+                    "Поднимите себя, оттолкнувшись от земли. В это время делается выдох." +
+                    "Необходимое для подьема усилие делается при помощи рук и груди",
+            (arrayOf(listMuscle[0], listMuscle[1]))
+        ), // 0
         Excercise("Подтягивания", "Подтягивания", (arrayOf(listMuscle[2], listMuscle[3]))), //1
-        Excercise("Приседания","Приседания", (arrayOf(listMuscle[4], listMuscle[5]))), //2
-        Excercise("Становая тяга","Становая", (arrayOf(listMuscle[2], listMuscle[4]))), //3
-        Excercise("Жим от груди (лёжа)","Жим от груди (лёжа)", (arrayOf(listMuscle[0], listMuscle[2], listMuscle[10]))), //4
-        Excercise("Бег","Бег", (arrayOf(listMuscle[5], listMuscle[9], listMuscle[8], listMuscle[4]))), //5
-        Excercise("Жим от груди (сидя)","Жим от груди (сидя)", arrayOf(listMuscle[0], listMuscle[1], listMuscle[7])), //6
-        Excercise("Приседания с гирей","Приседания с гирей", arrayOf(listMuscle[8], listMuscle[4], listMuscle[5])), //7
-        Excercise("Жим двумя ногами","Жим двумя ногами", arrayOf(listMuscle[8], listMuscle[4], listMuscle[11], listMuscle[12], listMuscle[4])), //8
-        Excercise("Сгибание рук на бицепс-машине","Сгибание рук на бицепс-машине", arrayOf(listMuscle[3])), //9
-        Excercise("Сгибания в пресс-машине", "Сгибания в пресс-машине", arrayOf(listMuscle[15], listMuscle[14], listMuscle[13])), //10
-        Excercise("Выпады", "Выпады", arrayOf(listMuscle[8], listMuscle[4], listMuscle[16] )), //11
-        Excercise("Румынская тяга", "Румынская тяга", arrayOf(listMuscle[8], listMuscle[4], listMuscle[6])), //12
+        Excercise("Приседания", "Приседания", (arrayOf(listMuscle[4], listMuscle[5]))), //2
+        Excercise("Становая тяга", "Становая", (arrayOf(listMuscle[2], listMuscle[4]))), //3
+        Excercise(
+            "Жим от груди (лёжа)",
+            "Жим от груди (лёжа)",
+            (arrayOf(listMuscle[0], listMuscle[2], listMuscle[10]))
+        ), //4
+        Excercise(
+            "Бег",
+            "Бег",
+            (arrayOf(listMuscle[5], listMuscle[9], listMuscle[8], listMuscle[4]))
+        ), //5
+        Excercise(
+            "Жим от груди (сидя)",
+            "Жим от груди (сидя)",
+            arrayOf(listMuscle[0], listMuscle[1], listMuscle[7])
+        ), //6
+        Excercise(
+            "Приседания с гирей",
+            "Приседания с гирей",
+            arrayOf(listMuscle[8], listMuscle[4], listMuscle[5])
+        ), //7
+        Excercise(
+            "Жим двумя ногами",
+            "Жим двумя ногами",
+            arrayOf(listMuscle[8], listMuscle[4], listMuscle[11], listMuscle[12], listMuscle[4])
+        ), //8
+        Excercise(
+            "Сгибание рук на бицепс-машине",
+            "Сгибание рук на бицепс-машине",
+            arrayOf(listMuscle[3])
+        ), //9
+        Excercise(
+            "Сгибания в пресс-машине",
+            "Сгибания в пресс-машине",
+            arrayOf(listMuscle[15], listMuscle[14], listMuscle[13])
+        ), //10
+        Excercise("Выпады", "Выпады", arrayOf(listMuscle[8], listMuscle[4], listMuscle[16])), //11
+        Excercise(
+            "Румынская тяга",
+            "Румынская тяга",
+            arrayOf(listMuscle[8], listMuscle[4], listMuscle[6])
+        ), //12
         Excercise("Гиперэкстензия", "Гиперэкстензия", arrayOf(listMuscle[4], listMuscle[5])), //13
-        Excercise("Обратная гиперэкстензия", "Обратная гиперэкстензия", arrayOf(listMuscle[4], listMuscle[5], listMuscle[17])), //14
-        Excercise("Тяга в наклоне", "Тяга в наклоне", arrayOf(listMuscle[2], listMuscle[6], listMuscle[17])), //15
-        Excercise("Скручивания на римском стуле", "Скручивания на римском стуле", arrayOf(listMuscle[15], listMuscle[14], listMuscle[18])), //16
-        Excercise("Подъёмы таза со штангой", "Подъёмы таза со штангой", arrayOf(listMuscle[4], listMuscle[19])), //17
-        Excercise("Подъем ног на скамье", "Подъем ног на скамье", arrayOf(listMuscle[15], listMuscle[5])) //18
+        Excercise(
+            "Обратная гиперэкстензия",
+            "Обратная гиперэкстензия",
+            arrayOf(listMuscle[4], listMuscle[5], listMuscle[17])
+        ), //14
+        Excercise(
+            "Тяга в наклоне",
+            "Тяга в наклоне",
+            arrayOf(listMuscle[2], listMuscle[6], listMuscle[17])
+        ), //15
+        Excercise(
+            "Скручивания на римском стуле",
+            "Скручивания на римском стуле",
+            arrayOf(listMuscle[15], listMuscle[14], listMuscle[18])
+        ), //16
+        Excercise(
+            "Подъёмы таза со штангой",
+            "Подъёмы таза со штангой",
+            arrayOf(listMuscle[4], listMuscle[19])
+        ), //17
+        Excercise(
+            "Подъем ног на скамье",
+            "Подъем ног на скамье",
+            arrayOf(listMuscle[15], listMuscle[5])
+        ) //18
     )
     val listBroke: Array<Disease> = arrayOf(
         Disease("Перелом руки"), //0
@@ -81,7 +151,7 @@ object TrainProgramm {
         listExcercise[2].diseases = arrayOf(listBroke[1], listBroke[4], listBroke[6], listBroke[8])
         listExcercise[3].diseases = listBroke
         listExcercise[4].diseases = arrayOf(listBroke[0], listBroke[2], listBroke[6])
-        listExcercise[5].diseases = arrayOf()
+        listExcercise[5].diseases = arrayOf(listBroke[1])
         listExcercise[6].diseases = arrayOf(listBroke[2], listBroke[6], listBroke[4])
         listExcercise[7].diseases = arrayOf(listBroke[3], listBroke[4], listBroke[8])
         listExcercise[8].diseases = arrayOf(listBroke[1], listBroke[3], listBroke[4], listBroke[5])
@@ -93,39 +163,56 @@ object TrainProgramm {
         listExcercise[14].diseases = arrayOf(listBroke[8])
         listExcercise[15].diseases = arrayOf(listBroke[3], listBroke[4])
         listExcercise[16].diseases = arrayOf(listBroke[3], listBroke[4])
-        listExcercise[17].diseases = arrayOf()
+        listExcercise[17].diseases = arrayOf(listBroke[3], listBroke[4])
         listExcercise[18].diseases = arrayOf(listBroke[1])
     }
 
     //Болезнь - опциональный параметр, она может не передаваться
     fun checkExercise(disease: List<Disease>? = null): MutableList<Excercise> {
-        var actual = listExcercise.clone().toMutableList()
+        var actual = listExcercise.toMutableList()
         if (disease != null) {
+            if (disease.isNotEmpty()){
             disease.forEach { tit ->
                 repeat(actual.size) {
                     actual.removeAll { !(it.checkDiseases(tit)) }
+                    }
                 }
             }
         }
         return actual
     }
-    fun checkExerciseChoose(muscle: List<Muscle>? = null): MutableList<Excercise>{
-        var actual = checkExercise(disease!!)
-        if (muscle != null){
-            muscle.forEach { ti ->
-                repeat(actual.size){
-                    actual.removeAll { it.checkChoose(ti) }
+
+    fun muscleCheck(m1: List<Muscle>?, m2: List<Muscle>?): Boolean {
+        m2?.forEach {
+            if (m1?.contains(it)!!)
+                return true
+        }
+        return false
+    }
+
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun checkExerciseChoose(muscle: List<Muscle>? = null): MutableList<Excercise> {
+            var actual1 = checkExercise(Profile.disease).toMutableList()
+        if (muscle != null) {
+            if (muscle.isNotEmpty()) {
+                actual1.removeIf { iter ->
+                    !muscleCheck(iter.muscles, muscle)
                 }
             }
         }
-        return actual
+        if(actual1.isEmpty())
+            actual1.add(Excercise("Извините, но вам противопоказаны занятия спортом","Извините, но вам противопоказаны занятия спортом."))
+        return actual1
     }
-    var abd = TrainProgramm.checkExercise(Profile.disease).toList()
+
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun qwerty(): List<Excercise> {
+        var cchoose: List<Muscle>? = null
+        if (Profile.choose != null){
+        var cchoose: List<Muscle>? = listOf()
+            for (i in 0..Profile.choose?.size!! - 1)
+            cchoose = cchoose?.plus(Profile.choose!![i].muscles.toList())}
+        var abd1 = TrainProgramm.checkExerciseChoose(cchoose).toList()
+        return abd1
+    }
 }
-
-
-//    fun checkAll(disease: List<Disease>? = null, ibm: Float):MutableList<Excercise>{
-//
-//        return checkExerciseIMB(checkExercise(disease),ibm)
-//
-//    }

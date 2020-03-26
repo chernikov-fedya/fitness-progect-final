@@ -27,11 +27,13 @@ class MainActivityDisease : AppCompatActivity() {
 
         recyclerdis.adapter = kak
     }
-    fun disease(v : View){
 
-
-        var next = Intent(this@MainActivityDisease, MainActivityMenu::class.java)
+    fun disease(v: View) {
+        var next = Intent(this@MainActivityDisease, MainActivityChoose::class.java)
         next.putExtra("Disease", 1)
         startActivity(next)
+    }
+    fun back(v: View){
+        onBackPressed()
     }
 }

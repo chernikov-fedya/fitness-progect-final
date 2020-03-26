@@ -30,8 +30,6 @@ class MainActivityRegistr : AppCompatActivity() {
         startActivity(next)
     }
     fun back(v: View){
-        var back = Intent(this@MainActivityRegistr, MainActivity::class.java)
-        back.putExtra("back", 0)
-        startActivity(back)
+        onBackPressed()
     }
 }
