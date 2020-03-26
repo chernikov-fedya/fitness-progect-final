@@ -4,156 +4,175 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
 
+    android:background="#F3FAFD"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="-77dp"
+    tools:layout_editor_absoluteY="-168dp">
 
-    <LinearLayout
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <ImageButton
+        android:id="@+id/photo"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@id/gridLayout"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ic_radio_button_unchecked_black_24dp"
+        android:backgroundTint="#FFF"
+        android:src="@drawable/ic_control_point_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F3FAFD"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-77dp"
-        tools:layout_editor_absoluteY="-168dp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp"
+        android:columnCount="2"
+        app:layout_goneMarginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/radioGroup_character"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints">
 
-        <include layout="@layout/toolbar">
-        </include>
-        <ImageButton
-            android:id="@+id/photo"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="6dp"
-            android:background="@drawable/ic_radio_button_unchecked_black_24dp"
-            android:backgroundTint="#FFF"
-            android:src="@drawable/ic_control_point_black_24dp" />
-
-        <GridLayout
-            android:layout_gravity="center"
-            android:columnCount="2"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/login"
-                android:layout_gravity="fill"
-                android:layout_width="174dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:hint="Логин:"
-                android:inputType="textPersonName"
-                android:paddingStart="6dp"
-                android:textColor="#6C6C6C" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_gravity="fill"
-                android:layout_width="174dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"
-                android:hint="Пароль:"
-                android:maxLines="1"
-                android:paddingStart="6dp"
-                android:textColor="#6C6C6C"
-                android:inputType="textPassword"/>
-
-            <EditText
-                android:id="@+id/name"
-                android:layout_gravity="fill"
-                android:layout_width="174dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:hint="Имя:"
-                android:paddingStart="6dp"
-                android:textColor="#6C6C6C" />
-
-            <EditText
-                android:id="@+id/height"
-                android:layout_gravity="fill"
-                android:layout_marginStart="14dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="14dp"
-                android:hint="Рост:"
-                android:inputType="number"/>
-
-            <EditText
-                android:layout_gravity="fill"
-                android:id="@+id/weight"
-                android:layout_marginStart="14dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Вес:"
-                android:inputType="number"/>
-
-            <EditText
-                android:layout_gravity="fill"
-                android:id="@+id/age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"
-                android:hint="Возраст:"
-                android:inputType="number" />
-        </GridLayout>
-
-        <RadioGroup
-            android:layout_gravity="center"
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:layout_marginStart="14dp"
-            android:id="@+id/radioGroup_character"
-            android:layout_width="174dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-                <RadioButton
-                    android:id="@+id/radioButton_male"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:theme="@style/MyRadioButton"
-                    android:layout_gravity="center_vertical" />
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/male"
-                        android:layout_marginEnd="20dp">
-                    </ImageView>
+            android:hint="Логин:"
+            android:inputType="textPersonName"
+            android:paddingStart="6dp"
+            android:textColor="#6C6C6C" />
 
-                <RadioButton
-                    android:layout_gravity="center_vertical"
-                    android:id="@+id/radioButton_female"
-                    android:theme="@style/MyRadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false" />
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/female">
-                </ImageView>
-        </RadioGroup>
-        <Button
-            android:id="@+id/logAc"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="160dp"
-            android:layout_marginEnd="24dp"
-            android:background="@color/ButtonColor"
-            android:radius="10dp"
-            android:elevation="6dp"
-            android:stateListAnimator="@null"
-            android:translationZ="4dp"
-            android:textColor="#fff"
-            android:text="Создать аккаунт"
-            android:onClick="display" />
+            android:layout_gravity="fill"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Пароль:"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingStart="6dp"
+            android:textColor="#6C6C6C" />
 
-    </LinearLayout>
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginStart="14dp"
+            android:hint="Имя:"
+            android:paddingStart="6dp"
+            android:textColor="#6C6C6C" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Рост:"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginStart="14dp"
+            android:hint="Вес:"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Возраст:"
+            android:inputType="number" />
+    </GridLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_character"
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/logAc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout">
+
+        <RadioButton
+            android:id="@+id/radioButton_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="false"
+            android:theme="@style/MyRadioButton" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/male"></ImageView>
+
+        <RadioButton
+            android:id="@+id/radioButton_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="false"
+            android:theme="@style/MyRadioButton" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/female"></ImageView>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/logAc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ButtonColor"
+        android:elevation="6dp"
+        android:onClick="display"
+        android:radius="10dp"
+        android:layout_marginBottom="60dp"
+        android:stateListAnimator="@null"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:text="Создать аккаунт"
+        android:textColor="#fff"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="24dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

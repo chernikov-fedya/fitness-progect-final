@@ -54,8 +54,11 @@
         android:textColor="#fff"
         android:layout_gravity="center"
         android:layout_marginStart="24dp"
+        android:stateListAnimator="@null"
+        android:translationZ="4dp"
+        android:elevation="6dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/ButtonColor"
         android:radius="10dp"
         android:onClick="disease" />
