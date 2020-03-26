@@ -9,19 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.TrainProgramm
+import com.example.myapplication.TrainProgramm.abd
 
 class Excercise(
     val name: String?,
+    val opisanie: String?,
     var muscleGroup: Array<Muscle>,
     var imbDownLimit: Float? = null ,
     var imbLimit: Float? = null
-): Parcelable {
-    constructor(source: Parcel) : this(
-        source.readString(),
-        source.readArray(ClassLoader.getSystemClassLoader()) as Array<Muscle>,
-        source.readFloat(),
-        source.readFloat()
-    )
+) {
+
     //var defaultRest: Double = 30.0
     //var podxod: Int? = null
     //var povtor: Int? = null
@@ -45,33 +43,15 @@ class Excercise(
 
     fun checkChoose(muscle: Muscle) = muscleGroup.find { it != muscle } != null
 
-    override fun writeToParcel(dest: Parcel?, flags: Int): Unit = with(dest) {
-        this?.writeString(name)
-        this?.writeArray(muscleGroup)
-        imbDownLimit?.let { this?.writeFloat(it) }
-        this?.writeArray(arrayOf(imbLimit))
-    }
 
     override fun toString(): String {
         return "$name"
     }
 
-    override fun describeContents(): Int {
-        return 0
-    }
-    companion object {
-        @JvmField
-        val CREATOR: Parcelable.Creator<Excercise> = object : Parcelable.Creator<Excercise> {
-            override fun createFromParcel(parcel: Parcel): Excercise {
-                return Excercise(parcel)
-            }
 
-            override fun newArray(size: Int): Array<Excercise?> {
-                return arrayOfNulls(size)
-            }
-        }
     }
-}
+
+
 
 
 class ExerciseAdapter(): RecyclerView.Adapter<ExerciseAdapter.Companion.ExerciseHolder>(){
@@ -88,7 +68,12 @@ class ExerciseAdapter(): RecyclerView.Adapter<ExerciseAdapter.Companion.Exercise
     override fun onBindViewHolder(holder: ExerciseHolder, position: Int) {
         holder.n.setOnClickListener { v ->
             var next: Intent = Intent(c, Desc::class.java)
-            next.putExtra("a", excercises[position])
+            var mna : ArrayList<String> = arrayListOf("","","","","","","","","","","","","","","","","","","","","")
+            for (i in 0..abd.size-1){
+               // mna?.set(i, abd[i].name.toString())
+                mna[i] = abd[i].opisanie.toString()
+            }
+            next.putExtra("a", mna[position])
             c.startActivity(next)
         }
         holder.bind(excercises[position])

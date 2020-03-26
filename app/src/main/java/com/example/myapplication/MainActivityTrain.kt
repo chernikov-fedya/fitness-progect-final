@@ -24,7 +24,6 @@ class MainActivityTrain : AppCompatActivity() {
             ka.excercises = TrainProgramm.checkExercise(ddisease)
         }
         recycler.adapter = ka
-
     }
 
 }
