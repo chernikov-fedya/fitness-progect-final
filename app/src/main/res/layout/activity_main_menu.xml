@@ -73,16 +73,13 @@
 
         <ImageButton
             android:id="@+id/profile"
-            android:layout_width="60dp"
+            android:layout_width="411dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:background="@drawable/ic_person_black_24dp"
-            android:backgroundTint="#00FFFFFF"
-            android:text="Профиль"
-
+            android:background="@color/ICONS"
             android:onClick="profile"
+            android:src="@drawable/ic_person_black_24dp"
+            android:text="Профиль"
             app:srcCompat="@drawable/ic_person_black_24dp" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
 </GridLayout>

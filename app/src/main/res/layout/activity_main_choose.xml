@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityDisease"
+    tools:context=".MainActivityChoose"
     android:orientation="vertical"
     android:background="#F3FAFD"
     android:gravity="center_horizontal">
 
     <android.widget.Toolbar
         app:layout_constraintTop_toTopOf="parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/ButtonColor"
         android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/Toolbar">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:collapseIcon="@drawable/back"
+            android:foreground="@drawable/back"
+            android:foregroundTint="#FFFFFF"
+            android:onClick="back">
+
+        </ImageButton>
 
         <TextView
             android:id="@+id/toolbar_title"
@@ -25,38 +40,18 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:paddingStart="2dp"
-            android:text="ВЫБЕРИТЕ СВОЮ БОЛЕЗНЬ"
+            android:text="ВЫБЕРИТЕ ПРЕДПОЧТЕНИЯ"
             android:textColor="@color/ICONS"
             android:textSize="18sp" />
-
-        <ImageButton
-            android:id="@+id/back"
-            style="@android:style/Widget.Material.ImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="47dp"
-            android:layout_marginBottom="19dp"
-            android:backgroundTint="#00FFFFFF"
-            android:clickable="true"
-            android:collapseIcon="@drawable/back"
-            android:foreground="@drawable/back"
-            android:foregroundTint="#FFFFFF"
-            android:onClick="back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/toolbar_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </android.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
 
-    app:layout_constraintTop_toBottomOf="@+id/toolbar"
-    app:layout_constraintBottom_toTopOf="@+id/butt"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:id="@+id/recyclerdis"
-    tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/butt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recycler1"
+        tools:ignore="MissingConstraints" />
     <!--    <androidx.viewpager2.widget.ViewPager2-->
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="0dp"-->
@@ -64,10 +59,11 @@
     <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar"-->
     <!--        app:layout_constraintBottom_toTopOf="@+id/butt"/>-->
 
+
     <Button
         android:id="@+id/butt"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Продолжить регистрацию"
+        android:text="Завершить регистрацию"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#fff"
@@ -77,5 +73,5 @@
         android:layout_marginBottom="100dp"
         android:background="@color/ButtonColor"
         android:radius="10dp"
-        android:onClick="disease" />
+        android:onClick="go1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
