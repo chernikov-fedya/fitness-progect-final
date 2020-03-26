@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_light_login)
     }
     fun insert(v : View){
-        if (P.toString() == log.text.toString() && PreferenceProfileFragment.key_pass == pas.text.toString()){
+        if (P.toString() == log.text.toString() && P.toString() == pas.text.toString()){
             var next:Intent = Intent(this@MainActivity, MainActivityMenu::class.java)
             next.putExtra("HaveLog", Profile.login)
             startActivity(next)
