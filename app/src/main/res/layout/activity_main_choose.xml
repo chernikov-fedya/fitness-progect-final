@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivityChoose"
+    android:orientation="vertical"
     android:background="#F3FAFD"
-    android:layout_column="1"
-    android:layout_row="2"
-    android:orientation="horizontal"
-    tools:context=".MainActivityMenu"
-    android:id="@+id/linearLayout">
+    android:gravity="center_horizontal">
 
     <android.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,47 +40,38 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:paddingStart="2dp"
-            android:text="ГЛАВНАЯ"
+            android:text="ВЫБЕРИТЕ ПРЕДПОЧТЕНИЯ"
             android:textColor="@color/ICONS"
             android:textSize="18sp" />
-
     </android.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/butt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recycler1"
+        tools:ignore="MissingConstraints" />
+    <!--    <androidx.viewpager2.widget.ViewPager2-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:id="@+id/vp2"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/butt"/>-->
+
 
     <Button
+        android:id="@+id/butt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Завершить регистрацию"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#fff"
+        android:layout_gravity="center"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginBottom="100dp"
         android:background="@color/ButtonColor"
         android:radius="10dp"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:elevation="6dp"
-        android:stateListAnimator="@null"
-        android:translationZ="4dp"
-        android:layout_gravity="center"
-        android:text="Составить программу тренировок"
-        android:onClick="make"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:layout_gravity="bottom"
-        android:background="@color/ICONS">
-
-        <ImageButton
-            android:id="@+id/profile"
-            android:layout_width="411dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:background="@color/ICONS"
-            android:onClick="profile"
-            android:src="@drawable/ic_person_black_24dp"
-            android:text="Профиль"
-            app:srcCompat="@drawable/ic_person_black_24dp" />
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-</GridLayout>
+        android:onClick="go1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,8 +36,6 @@ class PreferenceProfileFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preference, rootKey)
-        setPreferenceListener(findPreference<EditTextPreference>(key_log)!!)
-        setPreferenceListener(findPreference<EditTextPreference>(key_pass)!!)
         setPreferenceListener(findPreference<EditTextPreference>(key_name)!!)
         setPreferenceListener(findPreference<EditTextPreference>(key_weight)!!)
         setPreferenceListener(findPreference<EditTextPreference>(key_height)!!)
@@ -46,8 +44,6 @@ class PreferenceProfileFragment : PreferenceFragmentCompat() {
     }
 
     companion object{
-        val key_log = "key_log"
-        val key_pass = "key_pass"
         val key_name = "key_name"
         val key_weight = "key_weight"
         val key_height = "key_height"
@@ -69,8 +65,6 @@ class PreferenceProfileFragment : PreferenceFragmentCompat() {
             if (preference is EditTextPreference) {
                 preference.setSummary(value)
                 when (preference.key){
-                    key_log -> preference.summary = Profile.login
-                    key_pass -> preference.summary = Profile.password
                     key_name -> preference.summary = Profile.name
                     key_weight -> preference.summary = Profile.weight
                     key_height ->  preference.summary = Profile.height

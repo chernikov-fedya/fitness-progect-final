@@ -9,10 +9,10 @@
     <TextView
         android:id="@+id/viewdesc"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+
         android:text=""
-        android:textSize="50dp"/>
+        android:textSize="25dp"/>
 
 
 </LinearLayout>
