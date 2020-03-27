@@ -2,9 +2,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
+    
     <PreferenceCategory
         android:key="profile_category"
         android:title="Профиль"
+
         >
         <EditTextPreference
             android:dialogTitle="Ваше имя"

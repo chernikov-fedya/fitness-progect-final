@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -35,6 +36,7 @@ class MuscleGroupAdapter() : RecyclerView.Adapter<MuscleGroupAdapter.Companion.M
         class MuscleGroupHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             var n: TextView = itemView.findViewById(R.id.evol)
             var b: CheckBox = itemView.findViewById(R.id.love)
+            var l : RelativeLayout = itemView.findViewById(R.id.root_desease)
             fun bind(muscle: MuscleGroup) {
                 b.setOnCheckedChangeListener { buttonView, isChecked ->
                     if (isChecked)
@@ -42,6 +44,9 @@ class MuscleGroupAdapter() : RecyclerView.Adapter<MuscleGroupAdapter.Companion.M
                     else
                         Profile.choose?.remove(muscle)
 
+                }
+                l.setOnClickListener { v ->
+                    b.isChecked = !b.isChecked
                 }
                 n.setText(muscle.name)
             }

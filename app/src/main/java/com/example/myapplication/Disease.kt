@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -26,6 +27,7 @@ class DiseaseAdapter() : RecyclerView.Adapter<DiseaseAdapter.Companion.DiseaseHo
         class DiseaseHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
             var n : TextView = itemView.findViewById(R.id.text)
             var b : CheckBox = itemView.findViewById(R.id.ccheckk)
+            var l : RelativeLayout = itemView.findViewById(R.id.root_desease)
             fun bind(disease: Disease){
                 b.setOnCheckedChangeListener { buttonView, isChecked ->
                     if (isChecked)
@@ -33,6 +35,9 @@ class DiseaseAdapter() : RecyclerView.Adapter<DiseaseAdapter.Companion.DiseaseHo
                     else
                     Profile.disease?.remove(disease)
 
+                }
+                l.setOnClickListener { v ->
+                    b.isChecked = !b.isChecked
                 }
                 n.setText(disease.name)
             }
