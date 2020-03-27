@@ -29,6 +29,8 @@ class Excercise(
     /*fun restPlus() {
     println("Достаточно ли времени на отдых: Y-YES, N-NOW")
     var o: String = readLine()!!
+
+    +
     when (o) {
         "Y", "YES", "y", "yes" -> return
         else -> defaultRest = defaultRest + defaultRest * 0.2
