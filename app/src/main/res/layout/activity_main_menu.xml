@@ -11,7 +11,7 @@
 
     <android.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/ButtonColor"
         android:minHeight="?attr/actionBarSize"
@@ -32,8 +32,8 @@
             android:collapseIcon="@drawable/back"
             android:foreground="@drawable/back"
             android:foregroundTint="#FFFFFF"
-            android:onClick="back">
-        </ImageButton>
+            android:onClick="back"></ImageButton>
+
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
@@ -42,15 +42,17 @@
             android:paddingStart="2dp"
             android:text="ГЛАВНАЯ"
             android:textColor="@color/ICONS"
-            android:textSize="18sp" />
+            android:textSize="17sp"
+            android:textStyle="normal|bold" />
     </android.widget.Toolbar>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toTopOf="@id/viewpager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/viewpager"
         app:tabMode="fixed"
         tools:ignore="MissingConstraints" />
 
@@ -58,8 +60,7 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tabs"
- />
+        app:layout_constraintTop_toBottomOf="@id/tabs" />
 
     <Button
         android:id="@+id/button"

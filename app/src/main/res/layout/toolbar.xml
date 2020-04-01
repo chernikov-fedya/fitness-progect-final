@@ -32,7 +32,8 @@
         android:paddingStart="2dp"
         android:text="СОЗДАНИЕ АККАУНТА"
         android:textColor="@color/ICONS"
-        android:textSize="18sp" />
+        android:textSize="17sp"
+        android:textStyle="normal|bold" />
 
     </android.widget.Toolbar>
 

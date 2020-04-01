@@ -40,9 +40,10 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:paddingStart="2dp"
+            android:textStyle="normal|bold"
             android:text="ВЫБЕРИТЕ ПРЕДПОЧТЕНИЯ"
             android:textColor="@color/ICONS"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
     </android.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
 
@@ -51,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/recycler1"
+        android:layout_marginBottom="20dp"
         tools:ignore="MissingConstraints" />
     <!--    <androidx.viewpager2.widget.ViewPager2-->
     <!--        android:layout_width="match_parent"-->

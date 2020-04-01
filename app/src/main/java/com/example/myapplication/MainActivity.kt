@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_light_login)
+
+        setActionBar(toolbar)
     }
     fun insert(v : View){
         if (P.toString() == log.text.toString() && P.toString() == pas.text.toString()){

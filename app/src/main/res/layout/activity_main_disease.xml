@@ -39,10 +39,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
+            android:textStyle="normal|bold"
             android:paddingStart="2dp"
             android:text="ВЫБЕРИТЕ СВОЮ БОЛЕЗНЬ"
             android:textColor="@color/ICONS"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
     </android.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
 
@@ -50,6 +51,7 @@
     app:layout_constraintBottom_toTopOf="@+id/butt"
     android:layout_width="match_parent"
     android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
     android:id="@+id/recyclerdis"
     tools:ignore="MissingConstraints" />
     <!--    <androidx.viewpager2.widget.ViewPager2-->
