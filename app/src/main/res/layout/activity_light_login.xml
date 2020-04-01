@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#BBD7ED"
+        android:background="#F3FAFD"
         android:orientation="vertical">
 
         <android.widget.Toolbar
@@ -55,7 +55,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/wColor"
             android:hint="Логин"
             android:inputType="textPersonName"
             android:shadowColor="#00000000"
@@ -69,7 +68,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:backgroundTint="@color/wColor"
             android:ems="10"
             android:hint="Пароль"
             android:inputType="textPassword"
@@ -102,6 +100,8 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="24dp"
             android:background="#FFFFFF"
+            android:textColor="@color/ButtonColor"
+            android:textStyle="normal|bold"
             android:onClick="insert"
             android:radius="10dp"
             android:text="Вход" />
@@ -114,8 +114,10 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="22dp"
             android:layout_marginEnd="24dp"
-            android:background="#4489ff"
+            android:background="@color/ButtonColor"
+            android:textStyle="normal|bold"
             android:radius="10dp"
+            android:textColor="#fff"
             android:onClick="regist"
             android:text="Создать аккаунт" />
 
