@@ -11,6 +11,8 @@ import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main_disease.*
+import kotlinx.android.synthetic.main.activity_main_disease.toolbar
+import kotlinx.android.synthetic.main.activity_main_menu.*
 import kotlinx.android.synthetic.main.activity_main_train.*
 
 
@@ -20,6 +22,7 @@ class MainActivityDisease : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_disease)
+
 
         var pip = LinearLayoutManager(this)
         recyclerdis.layoutManager = pip

@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3FAFD"
-    android:layout_column="1"
-    android:layout_row="2"
     android:orientation="horizontal"
-    tools:context=".MainActivityMenu"
-    android:id="@+id/linearLayout">
+    tools:context=".MainActivityMenu">
 
     <android.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/ButtonColor"
-        android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/Toolbar">
+        android:theme="@style/Toolbar"
+        app:layout_constraintBottom_toTopOf="@id/tabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/back"
@@ -31,52 +33,61 @@
             android:foreground="@drawable/back"
             android:foregroundTint="#FFFFFF"
             android:onClick="back">
-
         </ImageButton>
-
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:paddingStart="2dp"
             android:text="ГЛАВНАЯ"
             android:textColor="@color/ICONS"
             android:textSize="18sp" />
-
     </android.widget.Toolbar>
-
-    <Button
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewpager"
+        app:tabMode="fixed"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+ />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/ButtonColor"
+        android:onClick="make"
         android:radius="10dp"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:elevation="6dp"
-        android:stateListAnimator="@null"
-        android:translationZ="4dp"
-        android:layout_gravity="center"
         android:text="Составить программу тренировок"
-        android:onClick="make"/>
+        android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:layout_gravity="bottom"
-        android:background="@color/ICONS">
+        android:layout_height="wrap_content"
+        android:background="@color/ICONS"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
             android:id="@+id/profile"
-            android:layout_width="411dp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:background="@color/ICONS"
             android:onClick="profile"
@@ -84,4 +95,5 @@
             android:text="Профиль"
             app:srcCompat="@drawable/ic_person_black_24dp" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-</GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,17 @@ class MainActivityMenu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setActionBar(toolbar)
+        val actionBar = supportActionBar
+
+
         setContentView(R.layout.activity_main_menu)
+
+        val fragmentAdapter = PagerAdapter(supportFragmentManager)
+        viewpager.adapter = fragmentAdapter
+
+        tabs.setupWithViewPager(viewpager)
     }   
     fun profile(v : View){
         var next:Intent = Intent(this@MainActivityMenu, ProfileActivity::class.java )

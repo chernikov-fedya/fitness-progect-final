@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#570000</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#012E67</color>
     <color name="launcColor">#FF00FF</color>
     <color name="backColor">#485661</color>
     <color name="wColor">#FFFFFF</color>

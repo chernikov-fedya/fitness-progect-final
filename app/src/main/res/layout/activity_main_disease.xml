@@ -10,44 +10,39 @@
     android:gravity="center_horizontal">
 
     <android.widget.Toolbar
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/ButtonColor"
-        android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/Toolbar">
-
-        <TextView
-            android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:paddingStart="2dp"
-            android:text="ВЫБЕРИТЕ СВОЮ БОЛЕЗНЬ"
-            android:textColor="@color/ICONS"
-            android:textSize="18sp" />
+        android:theme="@style/Toolbar"
+        app:layout_constraintBottom_toTopOf="@id/recyclerdis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/back"
             style="@android:style/Widget.Material.ImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="47dp"
-            android:layout_marginBottom="19dp"
             android:backgroundTint="#00FFFFFF"
             android:clickable="true"
             android:collapseIcon="@drawable/back"
             android:foreground="@drawable/back"
             android:foregroundTint="#FFFFFF"
-            android:onClick="back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/toolbar_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:onClick="back">
+        </ImageButton>
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:paddingStart="2dp"
+            android:text="ВЫБЕРИТЕ СВОЮ БОЛЕЗНЬ"
+            android:textColor="@color/ICONS"
+            android:textSize="18sp" />
     </android.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
 
@@ -73,11 +68,8 @@
         android:textColor="#fff"
         android:layout_gravity="center"
         android:layout_marginStart="24dp"
-        android:stateListAnimator="@null"
-        android:translationZ="4dp"
-        android:elevation="6dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/ButtonColor"
         android:radius="10dp"
         android:onClick="disease" />
