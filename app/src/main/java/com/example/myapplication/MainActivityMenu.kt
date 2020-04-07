@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.myapplication.Man.ProfileActivity
+import com.example.myapplication.Train.MainActivityTrain
 import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainActivityMenu : AppCompatActivity() {

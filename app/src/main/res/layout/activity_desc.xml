@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Desc">
+    tools:context=".Train.Desc">
     <TextView
         android:id="@+id/viewdesc"
         android:layout_width="match_parent"

@@ -1,23 +1,23 @@
-package com.example.myapplication
+package com.example.myapplication.Train
 
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.TrainProgramm
+import com.example.myapplication.Man.Disease
+import com.example.myapplication.Man.Muscle
+import com.example.myapplication.R
 
 class Excercise(
     val name: String?,
     val opisanie: String?,
     var muscleGroup: Array<Muscle>? = null,
-    var imbDownLimit: Float? = null ,
+    var imbDownLimit: Float? = null,
     var imbLimit: Float? = null
 ) {
 
@@ -66,7 +66,9 @@ class ExerciseAdapter(): RecyclerView.Adapter<ExerciseAdapter.Companion.Exercise
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder {
         var eee = LayoutInflater.from(parent.context).inflate(R.layout.exercise_view, parent, false)
-        return ExerciseHolder(eee)
+        return ExerciseHolder(
+            eee
+        )
     }
 
     override fun getItemCount(): Int = excercises.size

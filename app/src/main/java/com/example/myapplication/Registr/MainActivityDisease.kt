@@ -1,19 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.Registr
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.viewpager2.widget.ViewPager2
-import android.widget.ArrayAdapter
-import android.widget.RadioButton
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.Man.DiseaseAdapter
+import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_main_disease.*
-import kotlinx.android.synthetic.main.activity_main_disease.toolbar
-import kotlinx.android.synthetic.main.activity_main_menu.*
-import kotlinx.android.synthetic.main.activity_main_train.*
 
 
 class MainActivityDisease : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Man
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.CheckBox
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.Train.TrainProgramm
 
 class MuscleGroup(name: String, muscles: Array<Muscle>) {
     var name = name
@@ -21,9 +23,11 @@ class MuscleGroupAdapter() : RecyclerView.Adapter<MuscleGroupAdapter.Companion.M
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MuscleGroupAdapter.Companion.MuscleGroupHolder {
+    ): MuscleGroupHolder {
         var zzz = LayoutInflater.from(parent.context).inflate(R.layout.choose_view, parent, false)
-        return MuscleGroupHolder(zzz)
+        return MuscleGroupHolder(
+            zzz
+        )
     }
 
     override fun getItemCount(): Int = muscles.size

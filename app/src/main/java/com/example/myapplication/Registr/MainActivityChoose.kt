@@ -1,12 +1,14 @@
-package com.example.myapplication
+package com.example.myapplication.Registr
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.MainActivityMenu
+import com.example.myapplication.Man.MuscleGroupAdapter
+import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_main_choose.*
-import kotlinx.android.synthetic.main.activity_main_disease.*
 
 class MainActivityChoose : AppCompatActivity() {
 

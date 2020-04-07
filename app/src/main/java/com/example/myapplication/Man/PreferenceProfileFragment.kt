@@ -1,17 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.Man
 
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentActivity
 import androidx.preference.EditTextPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
-import kotlinx.android.synthetic.main.profile_layout.*
+import com.example.myapplication.R
 
 
 class ProfileActivity : AppCompatActivity(){
@@ -36,11 +32,21 @@ class PreferenceProfileFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preference, rootKey)
-        setPreferenceListener(findPreference<EditTextPreference>(key_name)!!)
-        setPreferenceListener(findPreference<EditTextPreference>(key_weight)!!)
-        setPreferenceListener(findPreference<EditTextPreference>(key_height)!!)
-        setPreferenceListener(findPreference<EditTextPreference>(key_age)!!)
-        setPreferenceListener(findPreference<EditTextPreference>(key_sex)!!)
+        setPreferenceListener(
+            findPreference<EditTextPreference>(key_name)!!
+        )
+        setPreferenceListener(
+            findPreference<EditTextPreference>(key_weight)!!
+        )
+        setPreferenceListener(
+            findPreference<EditTextPreference>(key_height)!!
+        )
+        setPreferenceListener(
+            findPreference<EditTextPreference>(key_age)!!
+        )
+        setPreferenceListener(
+            findPreference<EditTextPreference>(key_sex)!!
+        )
     }
 
     companion object{
@@ -51,7 +57,8 @@ class PreferenceProfileFragment : PreferenceFragmentCompat() {
         val key_sex = "key_sex"
 
         fun setPreferenceListener(p : Preference){
-            p.onPreferenceChangeListener = listener
+            p.onPreferenceChangeListener =
+                listener
             if (p is EditTextPreference) {
                 listener.onPreferenceChange(
                     p,

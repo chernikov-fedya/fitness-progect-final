@@ -1,9 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.Registr
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.myapplication.Man.Profile
+import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_light_registr.*
 
 
@@ -26,7 +28,7 @@ class MainActivityRegistr : AppCompatActivity() {
         if (radioButton_female.isChecked == true)
             Profile.sex = "Женщина"
         var next: Intent = Intent(this@MainActivityRegistr, MainActivityDisease::class.java)
-        next.putExtra("login",Profile.login)
+        next.putExtra("login", Profile.login)
         startActivity(next)
     }
     fun back(v: View){

@@ -9,13 +9,13 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivityChoose"></activity>
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".MainActivityDisease" />
-        <activity android:name=".Desc" />
-        <activity android:name=".MainActivityTrain" />
+        <activity android:name=".Registr.MainActivityChoose"></activity>
+        <activity android:name=".Man.ProfileActivity" />
+        <activity android:name=".Registr.MainActivityDisease" />
+        <activity android:name=".Train.Desc" />
+        <activity android:name=".Train.MainActivityTrain" />
         <activity android:name=".MainActivityMenu" />
-        <activity android:name=".MainActivityRegistr" />
+        <activity android:name=".Registr.MainActivityRegistr" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

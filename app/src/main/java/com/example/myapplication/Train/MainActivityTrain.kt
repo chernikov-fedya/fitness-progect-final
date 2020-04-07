@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Train
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.Man.Muscle
+import com.example.myapplication.Man.Profile
+import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_main_train.*
 
 class MainActivityTrain : AppCompatActivity() {

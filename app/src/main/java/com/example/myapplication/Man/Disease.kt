@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Man
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,15 +7,19 @@ import android.widget.CheckBox
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.Train.TrainProgramm
 
 class Disease(name : String) {
     var name = name
 }
 class DiseaseAdapter() : RecyclerView.Adapter<DiseaseAdapter.Companion.DiseaseHolder>() {
     var diseases : Array<Disease> = TrainProgramm.listBroke
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiseaseAdapter.Companion.DiseaseHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiseaseHolder {
         var ddd = LayoutInflater.from(parent.context).inflate(R.layout.disease_view, parent, false)
-        return DiseaseHolder(ddd)
+        return DiseaseHolder(
+            ddd
+        )
     }
 
     override fun getItemCount(): Int = diseases.size

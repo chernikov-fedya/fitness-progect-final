@@ -1,11 +1,9 @@
-package com.example.myapplication
+package com.example.myapplication.Train
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcelable
+import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_desc.*
-import kotlin.properties.Delegates
 
 class Desc : AppCompatActivity() {
 

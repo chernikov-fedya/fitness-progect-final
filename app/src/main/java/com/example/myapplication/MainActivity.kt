@@ -5,10 +5,9 @@ import android.os.Build.VERSION_CODES.P
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.preference.EditTextPreference
-import androidx.preference.Preference
+import com.example.myapplication.Man.Profile
+import com.example.myapplication.Registr.MainActivityRegistr
 import kotlinx.android.synthetic.main.activity_light_login.*
-import kotlinx.android.synthetic.main.activity_light_login.view.*
 
 class MainActivity : AppCompatActivity() {
 
