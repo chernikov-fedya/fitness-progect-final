@@ -20,19 +20,19 @@ class PagerAdapter (fm: FragmentManager): FragmentPagerAdapter(fm){
         }
     }
     override fun getCount(): Int {
-        return 6
+        return 7
     }
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position){
-            0 -> "Monday Fragment"
-            1 -> "Tuesday Fragment"
-            2 -> "Wednesday Fragment"
-            3 -> "Thursday Fragment"
-            4 -> "Friday Fragment"
-            5 -> "Saturday Fragment"
-            else -> {
-                return "Sunday Fragment"
-            }
+            0 -> "Monday"
+            1 -> "Tuesday"
+            2 -> "Wednesday"
+            3 -> "Thursday"
+            4 -> "Friday"
+            5 -> "Saturday"
+            6 -> "Sunday"
+
+            else -> return null
         }
     }
 }
