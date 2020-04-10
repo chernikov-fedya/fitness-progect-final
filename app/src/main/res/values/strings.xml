@@ -15,6 +15,10 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+    <string name="menu_profil">Профиль</string>
+    <string name="menu_top">Рейтинг</string>
+    <string name="menu_train">Тренировки</string>
+
     <string-array name="diseaselist">
         <item>Нет рук</item>
         <item>Нет ног</item>

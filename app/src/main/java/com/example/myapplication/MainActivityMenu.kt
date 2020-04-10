@@ -16,7 +16,6 @@ class MainActivityMenu : AppCompatActivity() {
         setActionBar(toolbar)
         val actionBar = supportActionBar
 
-
         setContentView(R.layout.activity_main_menu)
 
         val fragmentAdapter = PagerAdapter(supportFragmentManager)
