@@ -3,6 +3,7 @@
 
         <item
             android:id="@+id/button"
+            android:onClick="make"
             android:icon="@drawable/ic_assignment_black_24dp"
             android:title="@string/menu_train" />
 
@@ -12,8 +13,9 @@
             android:title="@string/menu_top" />
 
         <item
-            android:id="@+id/profil"
+            android:id="@+id/profile"
+            android:onClick="profile"
             android:icon="@drawable/ic_person_black_24dp"
-            android:title="@string/menu_profil" />
+            android:title="@string/menu_profile" />
 
 </menu>

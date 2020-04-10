@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#012E67</color>
+    <color name="colorPrimary">#4489ff</color>
     <color name="colorPrimaryDark">#012E67</color>
     <color name="colorAccent">#012E67</color>
     <color name="launcColor">#FF00FF</color>
