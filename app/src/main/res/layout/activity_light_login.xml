@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:background="#F3FAFD"
         android:orientation="vertical">
-
+<!--        app:layout_constraintBottom_toTopOf="@id/tabs"-->
         <android.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:background="@color/ButtonColor"
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/Toolbar"
-            app:layout_constraintBottom_toTopOf="@id/tabs"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"

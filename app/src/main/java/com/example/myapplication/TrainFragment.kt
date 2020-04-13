@@ -27,9 +27,9 @@ class TrainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var ret = inflater.inflate(R.layout.fragment_train, container, false)
-        var recycler : RecyclerView = ret.findViewById(R.id.trainFragment)
 
-
+        //закомментил это чудо, с ним не запускалось
+        //var recycler : RecyclerView = ret.findViewById(R.id.trainFragment)
 
         return ret
     }

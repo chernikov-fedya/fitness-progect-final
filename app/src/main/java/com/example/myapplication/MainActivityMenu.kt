@@ -16,13 +16,8 @@ class MainActivityMenu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setActionBar(toolbar)
-        val actionBar = supportActionBar
-
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
-
-/*        setContentView(R.layout.activity_main_menu)*/
+        setContentView(R.layout.activity_main_menu)
 
         val fragmentAdapter = PagerAdapter(supportFragmentManager)
         fragmentAdapter.data = mutableListOf(mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
@@ -30,7 +25,7 @@ class MainActivityMenu : AppCompatActivity() {
             mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]))
         viewpager.adapter = fragmentAdapter
 
-        tabs.setupWithViewPager(viewpager)
+        //tabs.setupWithViewPager(viewpager)
     }   
     fun profile(v : View){
         var next:Intent = Intent(this@MainActivityMenu, ProfileActivity::class.java )

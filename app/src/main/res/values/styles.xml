@@ -2,7 +2,6 @@
 
     <style name="Polina">
         <item name="android:textColor"> @color/colorPrimaryDark </item>
-
     </style>
 
     <!-- Base application theme. -->
@@ -26,9 +25,9 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="CardView.Dark"></style>
+    <style name="CardView.Dark" />
 
-    <style name="CardView"></style>
+    <style name="CardView" />
     <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textColorSecondary">@android:color/white</item>
