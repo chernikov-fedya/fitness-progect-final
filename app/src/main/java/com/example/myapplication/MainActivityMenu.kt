@@ -9,6 +9,7 @@ import com.example.myapplication.Train.Excercise
 import com.example.myapplication.Train.ExerciseAdapter
 import com.example.myapplication.Train.MainActivityTrain
 import com.example.myapplication.Train.TrainProgramm
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainActivityMenu : AppCompatActivity() {
@@ -19,7 +20,9 @@ class MainActivityMenu : AppCompatActivity() {
         setActionBar(toolbar)
         val actionBar = supportActionBar
 
-        setContentView(R.layout.activity_main_menu)
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+
+/*        setContentView(R.layout.activity_main_menu)*/
 
         val fragmentAdapter = PagerAdapter(supportFragmentManager)
         fragmentAdapter.data = mutableListOf(mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
@@ -42,4 +45,5 @@ class MainActivityMenu : AppCompatActivity() {
     fun back(v: View){
         onBackPressed()
     }
+
 }
