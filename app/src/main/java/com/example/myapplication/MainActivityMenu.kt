@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.myapplication.Man.ProfileActivity
+import com.example.myapplication.Train.Excercise
+import com.example.myapplication.Train.ExerciseAdapter
 import com.example.myapplication.Train.MainActivityTrain
+import com.example.myapplication.Train.TrainProgramm
 import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainActivityMenu : AppCompatActivity() {
@@ -19,6 +22,9 @@ class MainActivityMenu : AppCompatActivity() {
         setContentView(R.layout.activity_main_menu)
 
         val fragmentAdapter = PagerAdapter(supportFragmentManager)
+        fragmentAdapter.data = mutableListOf(mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
+            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
+            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]))
         viewpager.adapter = fragmentAdapter
 
         tabs.setupWithViewPager(viewpager)

@@ -4,14 +4,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.myapplication.DayFragment.*
+import com.example.myapplication.Train.Excercise
 import com.example.myapplication.Train.TrainProgramm
 
 class PagerAdapter (fm: FragmentManager): FragmentPagerAdapter(fm){
 
-    var data : MutableList<TrainProgramm>? = null
+    var data : MutableList<MutableList<Excercise>>? = null
 
     override fun getItem(position: Int): Fragment {
-        return TrainFragment.newInstance(data.exer)
+        return TrainFragment.newInstance(data?.get(position)?: mutableListOf())
 
 //        return when (position) {
 //            0 -> MondayFragment()
@@ -29,7 +30,7 @@ class PagerAdapter (fm: FragmentManager): FragmentPagerAdapter(fm){
         return data?.size ?: 0
     }
     override fun getPageTitle(position: Int): CharSequence? {
-        return data.name
+            return "Тренировочный день"
 
 //        return when (position){
 //            0 -> "Monday Fragment"
