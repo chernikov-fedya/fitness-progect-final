@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Train.Excercise
+import com.example.myapplication.Train.ExerciseAdapter
+import kotlinx.android.synthetic.main.activity_main_train.*
 
 class TrainFragment : Fragment() {
 
@@ -30,7 +33,12 @@ class TrainFragment : Fragment() {
 
         //закомментил это чудо, с ним не запускалось
         //var recycler : RecyclerView = ret.findViewById(R.id.trainFragment)
-
+        var recycler : RecyclerView = ret.findViewById(R.id.misha)
+        recycler.adapter = ExerciseAdapter().apply {
+            excercises = excer
+        }
+        var pi = LinearLayoutManager(ret.context)
+        recycler.layoutManager = pi
         return ret
     }
 

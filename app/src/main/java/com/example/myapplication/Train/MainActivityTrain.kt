@@ -1,5 +1,6 @@
 package com.example.myapplication.Train
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,16 +28,20 @@ class MainActivityTrain : AppCompatActivity() {
             for (i in 0..(Profile.choose?.size!! - 1))
             cchoose = cchoose?.plus(Profile.choose!![i].muscles.toList())
 
-            ka.excercises = TrainProgramm.checkExerciseChoose(cchoose)
+            ka.excercises = TrainProgramm.checkExerciseChoose()
         }
         else{
             var cchoose: List<Muscle>? = null
-            ka.excercises = TrainProgramm.checkExerciseChoose(cchoose)
+            ka.excercises = TrainProgramm.checkExerciseChoose()
         }
         recycler.adapter = ka
     }
     fun back(v: View){
         onBackPressed()
+    }
+    fun cTrain(v : View){
+        var next = Intent(this@MainActivityTrain, ActivityCompleteTrain :: class.java )
+        startActivity(next)
     }
 
 }

@@ -21,28 +21,6 @@ class MainActivityMenu : AppCompatActivity() {
 
         val fragmentAdapter = PagerAdapter(supportFragmentManager)
         // fragmentAdapter.data =
-        fun <T> createTrain(arr :Array<T>, count : Int, recommend : Int): MutableList<MutableList<T>> {
-            //Подгоняем количество рекомендуемых упражнений в день под все количество упражнений
-            var recommendEx = recommend
-            while (arr.size < recommendEx)
-                recommendEx--
-
-            // считаем количесто упражнений в день
-            var temp = arr.clone().toMutableList()
-            var quantity = temp.size / count
-
-            // если их меньше рекомендуемого, удваиваем
-            while (quantity < recommendEx) {
-                temp.addAll(arr.clone())
-                quantity = temp.size / count
-            }
-            // возвращаем массив массивов упражнений, собирая из из массива temp
-            return MutableList(count) {it ->
-                MutableList(recommendEx) {iti ->
-                    temp[it * recommendEx + iti]
-                }
-            }
-        }
 //        (mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
 //            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
 //            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]))

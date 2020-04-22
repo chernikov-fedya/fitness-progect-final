@@ -447,7 +447,8 @@ object TrainProgramm {
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
-    fun checkExerciseChoose(muscle: List<Muscle>? = null): MutableList<Excercise> {
+    fun checkExerciseChoose(): MutableList<Excercise> {
+       var muscle: List<Muscle>? = fillChoose()
             var actual1 = checkExercise(
                 disease
             ).toMutableList()
@@ -478,9 +479,41 @@ object TrainProgramm {
         var cchoose: List<Muscle>? = listOf()
             for (i in 0..Profile.choose?.size!! - 1)
             cchoose = cchoose?.plus(Profile.choose!![i].muscles.toList())}
-        var abd1 = checkExerciseChoose(
-            cchoose
-        ).toList()
+        var abd1 = checkExerciseChoose().toList()
         return abd1
+    }
+    fun <T> createTrain(arr :MutableList<T>, count : Int, recommend : Int): MutableList<MutableList<T>> {
+        //Подгоняем количество рекомендуемых упражнений в день под все количество упражнений
+        var recommendEx = recommend
+        while (arr.size < recommendEx)
+            recommendEx--
+
+        // считаем количесто упражнений в день
+        var temp = arr
+        var quantity = temp.size / count
+
+        // если их меньше рекомендуемого, удваиваем
+        while (quantity < recommendEx) {
+            temp.addAll(arr)
+            quantity = temp.size / count
+        }
+        // возвращаем массив массивов упражнений, собирая из из массива temp
+        return MutableList(count) {it ->
+            MutableList(recommendEx) {iti ->
+                temp[it * recommendEx + iti]
+            }
+        }
+    }
+    fun fillChoose(): List<Muscle>?{
+            var cchoose : List<Muscle>? = listOf()
+        if (Profile.choose != null) {
+            for (i in 0..(Profile.choose?.size!! - 1))
+                cchoose = cchoose?.plus(Profile.choose!![i].muscles.toList())
+        }
+        else{
+            cchoose = null
+
+        }
+        return cchoose
     }
 }

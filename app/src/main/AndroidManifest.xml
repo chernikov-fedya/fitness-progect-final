@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Registr.MainActivityChoose"></activity>
+        <activity android:name=".Train.ActivityCompleteTrain"></activity>
+        <activity android:name=".Registr.MainActivityChoose" />
         <activity android:name=".Man.ProfileActivity" />
         <activity android:name=".Registr.MainActivityDisease" />
         <activity android:name=".Train.Desc" />

@@ -46,7 +46,6 @@
             android:textSize="17sp" />
     </android.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
-
     app:layout_constraintTop_toBottomOf="@+id/toolbar"
     app:layout_constraintBottom_toTopOf="@+id/butt"
     android:layout_width="match_parent"
@@ -54,13 +53,6 @@
         android:layout_marginBottom="20dp"
     android:id="@+id/recyclerdis"
     tools:ignore="MissingConstraints" />
-    <!--    <androidx.viewpager2.widget.ViewPager2-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        android:id="@+id/vp2"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/butt"/>-->
-
     <Button
         android:id="@+id/butt"
         app:layout_constraintBottom_toBottomOf="parent"

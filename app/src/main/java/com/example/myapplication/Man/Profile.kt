@@ -11,3 +11,5 @@ object Profile {
     var disease: MutableList<Disease> = mutableListOf()
     var choose: MutableList<MuscleGroup>? = null
 }
+//var IMB : Double = weight!!.toDouble()/((height!!.toDouble()/100)* (height!!.toDouble()/100))
+//var rating : Double? = null
