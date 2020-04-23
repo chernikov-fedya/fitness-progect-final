@@ -1,9 +1,11 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.RequiresApi
 import com.example.myapplication.Man.ProfileActivity
 import com.example.myapplication.Train.Excercise
 import com.example.myapplication.Train.ExerciseAdapter
@@ -14,19 +16,15 @@ import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainActivityMenu : AppCompatActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setActionBar(toolbar)
         setContentView(R.layout.activity_main_menu)
 
         val fragmentAdapter = PagerAdapter(supportFragmentManager)
-        // fragmentAdapter.data =
-//        (mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
-//            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
-//            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]))
         viewpager.adapter = fragmentAdapter
 
-        //tabs.setupWithViewPager(viewpager)
     }   
     fun profile(v : View){
         var next:Intent = Intent(this@MainActivityMenu, ProfileActivity::class.java )

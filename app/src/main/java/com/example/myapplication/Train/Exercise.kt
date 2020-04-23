@@ -108,30 +108,30 @@ class ExerciseAdapter(): RecyclerView.Adapter<ExerciseAdapter.Companion.Exercise
     }
 }
 
-class ExerciseAdapter1(): RecyclerView.Adapter<ExerciseAdapter1.Companion.ExerciseHolder1>(){
-    var excercises : MutableList<Excercise> = mutableListOf()
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder1 {
-        var eee = LayoutInflater.from(parent.context).inflate(R.layout.complete_exersice_view, parent, false)
-        return ExerciseHolder1(eee)
-    }
-
-    override fun getItemCount(): Int = excercises.size
-
-    override fun onBindViewHolder(holder: ExerciseHolder1, position: Int) {
-        holder.bind(excercises[position])
-    }
-    companion object{
-        class ExerciseHolder1(itemView: View) : RecyclerView.ViewHolder(itemView){
-            var n : TextView = itemView.findViewById(R.id.name_ex)
-            var pov : TextView = itemView.findViewById(R.id.pov_ex)
-            var pod : TextView = itemView.findViewById(R.id.pod_ex)
-            fun bind(excercise: Excercise){
-                n.setText(excercise.name)
-                pov.setText("Подходы: " + excercise.podxod.toString())
-                pod.setText("Повторы: " + excercise.povtor.toString())
-            }
-        }
-    }
-
-}
+//class ExerciseAdapter1(): RecyclerView.Adapter<ExerciseAdapter1.Companion.ExerciseHolder1>(){
+//    var excercises : MutableList<Excercise> = mutableListOf()
+//
+//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder1 {
+//        var eee = LayoutInflater.from(parent.context).inflate(R.layout.complete_exersice_view, parent, false)
+//        return ExerciseHolder1(eee)
+//    }
+//
+//    override fun getItemCount(): Int = excercises.size
+//
+//    override fun onBindViewHolder(holder: ExerciseHolder1, position: Int) {
+//        holder.bind(excercises[position])
+//    }
+//    companion object{
+//        class ExerciseHolder1(itemView: View) : RecyclerView.ViewHolder(itemView){
+//            var n : TextView = itemView.findViewById(R.id.name_ex)
+//            var pov : TextView = itemView.findViewById(R.id.pov_ex)
+//            var pod : TextView = itemView.findViewById(R.id.pod_ex)
+//            fun bind(excercise: Excercise){
+//                n.setText(excercise.name)
+//                pov.setText("Подходы: " + excercise.podxod.toString())
+//                pod.setText("Повторы: " + excercise.povtor.toString())
+//            }
+//        }
+//    }
+//
+//}
