@@ -9,6 +9,11 @@ import com.example.myapplication.Man.Profile
 import com.example.myapplication.Man.Profile.disease
 
 object TrainProgramm {
+    val MAX_RATING = 2000
+    val MIN_RATING = 1000
+    val MIN_IMB = 10
+    val MAX_IMB = 64
+    val IMB_RATING_K = (MAX_RATING - MIN_RATING) / (MAX_IMB - MIN_IMB)
 
     val listMuscle: Array<Muscle> = arrayOf(
         Muscle("Грудные мышцы"),//0

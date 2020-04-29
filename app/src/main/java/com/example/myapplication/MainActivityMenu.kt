@@ -19,12 +19,12 @@ class MainActivityMenu : AppCompatActivity() {
         setActionBar(toolbar)
         setContentView(R.layout.activity_main_menu)
 
-        val fragmentAdapter = PagerAdapter(supportFragmentManager)
+//        val fragmentAdapter = PagerAdapter(supportFragmentManager)
+//        viewpager.adapter = fragmentAdapter
         // fragmentAdapter.data =
 //        (mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
 //            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
 //            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]))
-        viewpager.adapter = fragmentAdapter
 
         //tabs.setupWithViewPager(viewpager)
     }   

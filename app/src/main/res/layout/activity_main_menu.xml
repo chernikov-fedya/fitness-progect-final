@@ -46,7 +46,20 @@
             android:textSize="17sp"
             android:textStyle="normal|bold" />
     </android.widget.Toolbar>
-
+        <Button
+        android:id="@+id/strain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Начать тренировку"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/ButtonColor"
+        android:radius="10dp"
+        android:onClick="make" />
 <!--    <com.google.android.material.tabs.TabLayout-->
 <!--        android:id="@+id/tabs"-->
 <!--        android:layout_width="match_parent"-->
@@ -58,14 +71,7 @@
 <!--        tools:ignore="MissingConstraints" />-->
 
 <!--    app:layout_constraintTop_toBottomOf="@id/tabs"-->
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/toolbar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+
 
 <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
 <!--        android:id="@+id/nav_view"-->
