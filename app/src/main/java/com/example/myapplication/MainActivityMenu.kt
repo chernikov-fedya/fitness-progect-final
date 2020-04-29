@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.RequiresApi
 import com.example.myapplication.Man.ProfileActivity
 import com.example.myapplication.Train.Excercise
 import com.example.myapplication.Train.ExerciseAdapter
@@ -26,7 +27,6 @@ class MainActivityMenu : AppCompatActivity() {
 //            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
 //            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]))
 
-        //tabs.setupWithViewPager(viewpager)
     }   
     fun profile(v : View){
         var next:Intent = Intent(this@MainActivityMenu, ProfileActivity::class.java )
