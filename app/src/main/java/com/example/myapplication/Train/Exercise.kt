@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Man.Disease
 import com.example.myapplication.Man.Muscle
 import com.example.myapplication.R
+import com.example.myapplication.Train.TrainProgramm.IMB_RATING_K
 
 class Excercise(
     val name: String?,
@@ -23,8 +24,8 @@ class Excercise(
     var raiting = 0.0
     //var defaultRest: Double = 30.0
     var q: Double? = null // Коэффицент для расчёта сложности упражнения
-    var podxod: Int? = null
-    var povtor: Int? = null
+    var repeat : Int? = null
+    var approach : Int? = null
     var trainingWeight: Double = 20.0 // здесь стандартный начальный вес для упражнения
     /*fun restPlus() {
     println("Достаточно ли времени на отдых: Y-YES, N-NOW")
@@ -40,11 +41,31 @@ class Excercise(
     /*fun havearest() {
         println("Отдохни $defaultRest секунд")
     }*/
+    var weight: Double? = null
+    var recommendWeight = 80.0
+    var musclMult = 1
+    fun getRating(imb : Double, rating : Double) : Double{
+        var q = rating / imb / IMB_RATING_K
+        //println("Q = ${IMB_RATING_K}, q =$q")
+        weight = recommendWeight
+        //println("W = $weight")
+        var rating = weight!! * repeat!! * musclMult
+        //println("R = $rating")
+        var ratingAllApproach = 0.0
+        var step = 0.2
+        var temp = 1.0
+        for (i in 0 until approach!!) {
+            temp = temp + step
+            ratingAllApproach += (temp) * rating
+        }
+        ratingAllApproach /= approach!!
+        return ratingAllApproach
+    }
     override fun toString(): String {
         return "$name"
     }
     fun prString(): String {
-        return "$name $podxod $povtor $trainingWeight"
+        return "$name $approach $repeat $trainingWeight"
     }
     fun plusweight(){
         println("Сделайте разминочный подход (20 раз) с весом $trainingWeight " + "\n"
@@ -63,8 +84,6 @@ class Excercise(
     var muscles = muscleGroup?.toMutableList()
 
     fun checkDiseases(disease: Disease) = diseases.find { it ==  disease } == null
-
-    //fun checkChoose(muscle: Muscle) = muscleGroup.find { it != muscle } != null
 
     }
     @RequiresApi(Build.VERSION_CODES.N)
@@ -108,30 +127,30 @@ class ExerciseAdapter(): RecyclerView.Adapter<ExerciseAdapter.Companion.Exercise
     }
 }
 
-//class ExerciseAdapter1(): RecyclerView.Adapter<ExerciseAdapter1.Companion.ExerciseHolder1>(){
-//    var excercises : MutableList<Excercise> = mutableListOf()
-//
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder1 {
-//        var eee = LayoutInflater.from(parent.context).inflate(R.layout.complete_exersice_view, parent, false)
-//        return ExerciseHolder1(eee)
-//    }
-//
-//    override fun getItemCount(): Int = excercises.size
-//
-//    override fun onBindViewHolder(holder: ExerciseHolder1, position: Int) {
-//        holder.bind(excercises[position])
-//    }
-//    companion object{
-//        class ExerciseHolder1(itemView: View) : RecyclerView.ViewHolder(itemView){
-//            var n : TextView = itemView.findViewById(R.id.name_ex)
-//            var pov : TextView = itemView.findViewById(R.id.pov_ex)
-//            var pod : TextView = itemView.findViewById(R.id.pod_ex)
-//            fun bind(excercise: Excercise){
-//                n.setText(excercise.name)
-//                pov.setText("Подходы: " + excercise.podxod.toString())
-//                pod.setText("Повторы: " + excercise.povtor.toString())
-//            }
-//        }
-//    }
-//
-//}
+class ExerciseAdapter1(): RecyclerView.Adapter<ExerciseAdapter1.Companion.ExerciseHolder1>(){
+    var excercises : MutableList<Excercise> = mutableListOf()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder1 {
+        var eee = LayoutInflater.from(parent.context).inflate(R.layout.complete_exersice_view, parent, false)
+        return ExerciseHolder1(eee)
+    }
+
+    override fun getItemCount(): Int = excercises.size
+
+    override fun onBindViewHolder(holder: ExerciseHolder1, position: Int) {
+        holder.bind(excercises[position])
+    }
+    companion object{
+        class ExerciseHolder1(itemView: View) : RecyclerView.ViewHolder(itemView){
+            var n : TextView = itemView.findViewById(R.id.name_ex)
+            var pov : TextView = itemView.findViewById(R.id.pov_ex)
+            var pod : TextView = itemView.findViewById(R.id.pod_ex)
+            fun bind(excercise: Excercise){
+                n.setText(excercise.name)
+                pov.setText("Подходы: " + excercise.approach.toString())
+                pod.setText("Повторы: " + excercise.repeat.toString())
+            }
+        }
+    }
+
+}

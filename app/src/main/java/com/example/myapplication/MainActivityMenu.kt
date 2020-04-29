@@ -1,7 +1,6 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,14 +15,17 @@ import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainActivityMenu : AppCompatActivity() {
 
-    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setActionBar(toolbar)
         setContentView(R.layout.activity_main_menu)
 
-        val fragmentAdapter = PagerAdapter(supportFragmentManager)
-        viewpager.adapter = fragmentAdapter
+//        val fragmentAdapter = PagerAdapter(supportFragmentManager)
+//        viewpager.adapter = fragmentAdapter
+        // fragmentAdapter.data =
+//        (mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
+//            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]),
+//            mutableListOf(TrainProgramm.listExcercise[4],TrainProgramm.listExcercise[4]))
 
     }   
     fun profile(v : View){
