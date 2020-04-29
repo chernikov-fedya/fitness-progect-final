@@ -39,9 +39,6 @@ class MainActivityTrain : AppCompatActivity() {
     fun back(v: View){
         onBackPressed()
     }
-//    fun cTrain(v : View){
-//        var next = Intent(this@MainActivityTrain, ActivityCompleteTrain :: class.java )
-//        startActivity(next)
-//    }
+
 
 }

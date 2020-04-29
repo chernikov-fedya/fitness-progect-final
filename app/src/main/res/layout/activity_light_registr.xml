@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:layout_marginStart="14dp"
-            android:hint="Логин:"
+            android:hint="Email:"
             android:inputType="textPersonName"
             android:paddingStart="6dp"
             android:textColor="#6C6C6C" />
@@ -156,13 +156,17 @@
             android:layout_height="40dp"
             android:background="@drawable/female"></ImageView>
     </RadioGroup>
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/radioGroup_character"
+    android:id="@+id/txt"/>
     <Button
         android:id="@+id/logAc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/ButtonColor"
-        android:onClick="display"
+        android:onClick="register"
         android:radius="10dp"
         android:layout_marginBottom="40dp"
         android:layout_marginEnd="24dp"

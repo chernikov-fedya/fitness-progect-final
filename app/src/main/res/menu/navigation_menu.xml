@@ -17,5 +17,9 @@
             android:onClick="profile"
             android:icon="@drawable/ic_person_black_24dp"
             android:title="@string/menu_profile" />
+        <item
+                android:id="@+id/ghj"
+                android:icon="@android:color/background_dark"
+                android:title="Выход"/>
 
 </menu>

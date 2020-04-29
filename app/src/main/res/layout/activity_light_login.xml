@@ -100,11 +100,11 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="24dp"
             android:background="#FFFFFF"
-            android:textColor="@color/ButtonColor"
-            android:textStyle="normal|bold"
-            android:onClick="insert"
+            android:onClick="login"
             android:radius="10dp"
-            android:text="Вход" />
+            android:text="Вход"
+            android:textColor="@color/ButtonColor"
+            android:textStyle="normal|bold" />
 
         <Button
             android:id="@+id/regist"
@@ -118,7 +118,7 @@
             android:textStyle="normal|bold"
             android:radius="10dp"
             android:textColor="#fff"
-            android:onClick="regist"
+            android:onClick="register"
             android:text="Создать аккаунт" />
 
         <TextView
