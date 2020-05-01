@@ -19,6 +19,7 @@ class ActivityCompleteTrain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_complete_train)
+
         var cont = PagerAdapter1(supportFragmentManager)
         vlad.adapter = cont
     }

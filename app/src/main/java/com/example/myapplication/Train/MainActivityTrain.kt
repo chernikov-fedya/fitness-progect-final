@@ -11,6 +11,7 @@ import com.example.myapplication.Man.Muscle
 import com.example.myapplication.Man.Profile
 import com.example.myapplication.PagerAdapter
 import com.example.myapplication.R
+import com.example.myapplication.Registr.MainActivityRegistr
 import kotlinx.android.synthetic.main.activity_main_train.*
 
 class MainActivityTrain : AppCompatActivity() {
@@ -25,6 +26,10 @@ class MainActivityTrain : AppCompatActivity() {
     }
     fun back(v: View){
         onBackPressed()
+    }
+    fun cTrain(v:View){
+        var next = Intent(this, ActivityCompleteTrain::class.java)
+        startActivity(next)
     }
 
 

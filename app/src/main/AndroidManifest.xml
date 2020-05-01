@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Timeline"></activity>
+        <activity android:name=".Train.ActivityCompleteTrain"/>
         <activity android:name=".Registr.MainActivityChoose" />
         <activity android:name=".Man.ProfileActivity" />
         <activity android:name=".Registr.MainActivityDisease" />
@@ -20,7 +21,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

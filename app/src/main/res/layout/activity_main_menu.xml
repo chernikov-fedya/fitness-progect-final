@@ -47,7 +47,7 @@
             android:textStyle="normal|bold" />
     </android.widget.Toolbar>
         <Button
-        android:id="@+id/strain"
+        android:id="@+id/saatrain"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="Начать тренировку"
         android:layout_width="match_parent"
