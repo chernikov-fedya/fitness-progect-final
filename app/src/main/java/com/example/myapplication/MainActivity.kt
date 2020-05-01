@@ -31,19 +31,21 @@ class MainActivity : AppCompatActivity() {
 
         setActionBar(toolbar)
 
-        var uid = user!!.uid
+        var uid = user?.uid
 
         mDatabase = FirebaseDatabase.getInstance().getReference("Names")
 
-        mDatabase.child(uid).child("Names").addValueEventListener( object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
+        if (uid != null) {
+            mDatabase.child(uid).child("Names").addValueEventListener( object : ValueEventListener {
+                override fun onCancelled(p0: DatabaseError) {
 
-            }
+                }
 
-            override fun onDataChange(snapshot: DataSnapshot) {
-                Profile.name = snapshot.value.toString()
-            }
-        })
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    Profile.name = snapshot.value.toString()
+                }
+            })
+        }
        /* val loginBtn = findViewById<View>(R.id.`in`) as Button
 
         val regTxt = findViewById<View>(R.id.txt) as TextView
